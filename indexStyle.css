@@ -21,3 +21,18 @@ header{
 }
 
 
+.menu{ 
+    list-style: none;
+}
+.menu li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.menu li a {
+    transition: all 0.3s ease 0s;
+}
+.menu li a:hover  {
+    color: aqua;
+    
+}
