@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400');
-
+/* header */
 *{
    
     padding: 0%;
@@ -27,10 +27,13 @@ header{
     background-color: rgb(13, 25, 55);
 } 
 
- .logo{
+ #logo{
     cursor: pointer;
     
  }
+ /* end header */
+
+ /* body */
 .menu{ 
     list-style: none;
 }
@@ -79,9 +82,11 @@ header{
 
 
 body{
-    background-color: rgb(208, 242, 246);
+    background-color: rgb(31, 85, 91);
 }
+/* end body */
 
+/* footer */
 footer{
     background-color: #24262b;
     padding: 70px 0;
@@ -115,9 +120,11 @@ ul{
 content:"";
 position: absolute;
 Left:0;
-bottom: -10px;
+bottom: -5px;
 background-color: #e91e63;
 height: 2px;
+box-sizing: border-box;
+width: 70px;
 }
 .col ul li a {
     font-size: 16px;
@@ -145,3 +152,4 @@ height: 2px;
     display: block;
     transition: all 0.3s ease;
 }
+/* end footer */
