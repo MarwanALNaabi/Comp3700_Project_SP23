@@ -49,15 +49,16 @@ header{
 /* end header */
 
  /* body */
- h3.title{color:white ;
-         font-family: "Montserrat", sans-serif;
-         margin-left: 600;
-         margin-top: 30;}
+ label.fit{font-weight: bold;
+      font-family:"Montserrat", sans-serif;
+      margin-left: 500; margin-top: 50;
+      margin-bottom: 50;}
 
-h4.info{color: white;
-        font-family: "Montserrat", sans-serif;
-        margin-left: 630;}
+ input,select.fit{font-family:"Montserrat", sans-serif ;
+       margin-left: 520;color: black;
+       font-weight: 600;}
 
+option , select{color: black;}
 
 body{
     background-color: rgb(31, 85, 91);
