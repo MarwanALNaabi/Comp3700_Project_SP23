@@ -1,9 +1,4 @@
-#bkgImg{
-    background-image: url(BackgroundImgBook.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
-}
+
 header{
     display: flex;
     justify-content: space-between;
@@ -19,7 +14,15 @@ header{
     color: #ffffff;
     font-family: 'Times New Roman', Times, serif;
 }
-
+#sport-time{
+    color:  rgb(13, 25, 55);
+    font-size:2em;   
+}
+.duration{
+    color: rgb(13, 25, 55);
+    font-size: 25pt;
+    padding-left: 3cm;
+}
 footer{
     background-color: #24262b;
     padding: 70px 0;
@@ -29,25 +32,28 @@ body{
     background-color: rgb(208, 242, 246);
 }
 .book-form{
-    margin-top:1% ;
-    margin-left:3in;
-    
+    margin-top: 1%;
+    margin-left: 2.2in;
+    margin-bottom: 5px;
+    font-size: 2.9ex;
 }
 
 select{
-    inline-size: 40%;
+    inline-size: 50%;
     color: rgb(13, 25, 55);
     background-color: #ffffff;;
-    font-size: 1.5em;
     font-family: 'Times New Roman', Times, serif;
+}
+.choice-form{
+    color: rgb(13, 25, 55);
+    font-size: 25pt;
+    padding-left: 2.5cm;
 }
 .booking{
     text-decoration: underline;
     margin-top: 20px;
     margin-left: 5.5cm;
     font-size: 5em;
-    display: flex;
-    flex-direction: column;
     color: rgb(13, 25, 55);
     font-weight: bold;
 }
