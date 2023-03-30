@@ -1,0 +1,134 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 0px 5%;
+    background-color: rgb(13, 25, 55);
+} 
+*{
+    padding: 0%;
+    margin: 0; 
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+footer{
+    background-color: #24262b;
+    padding: 70px 0;
+    font-family: "Montserrat", sans-serif;
+}
+#backgroundImg{
+    background-image: url(About_us_Bakground_Image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20in;
+}
+body{
+    background-color: rgb(208, 242, 246);
+}
+.menu{ 
+    list-style: none;
+}
+.menu li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.menu li a {
+    transition: all 0.3s ease 0s;
+}
+
+.menu li a:hover  {
+    color: aqua;}
+
+
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col{
+    width: 50%;
+    text-transform: capitalize;
+    padding: 0 15px;
+}
+.col h3{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-weight: 500;
+    position: relative; 
+}
+.col h3::before{
+    content:"";
+    position: absolute;
+    Left:0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+}
+.col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+    margin-bottom: 7px;
+}
+.col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.col h4{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+.AUheader{
+    margin-left: 5.5cm;
+    color: rgb(13, 25, 55);
+    margin-top: 20px;
+    font-size: 5em;
+    font-weight: bold;
+    margin-bottom: 1.6%;
+    text-decoration: underline;
+}
+p{
+    color:rgb(13, 25, 55);
+    font-size: 24px;
+    margin-left: 9.5cm;
+    text-align: left;
+    width: 30%;
+}
+.email{
+  color: rgb(13, 25, 55) ;  
+}
+.email:hover{
+    color: red;
+}
+pre{
+    color:rgb(13, 25, 55);
+    font-size: 24px;
+    margin-left: 7.8cm;
+    
+}
+#pict{
+    width: 15cm;
+    height: 7cm;
+}
+
