@@ -51,11 +51,11 @@ header{
  /* body */
  label.fit{font-weight: bold;
       font-family:"Montserrat", sans-serif;
-      margin-left: 500; margin-top: 50;
+       margin-top: 50;
       margin-bottom: 50;}
 
  input,select.fit{font-family:"Montserrat", sans-serif ;
-       margin-left: 520;color: black;
+       margin-left: 20;color: black;
        font-weight: 600;}
 
 option , select{color: black;}
