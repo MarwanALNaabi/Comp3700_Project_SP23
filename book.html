@@ -20,7 +20,7 @@
 
 
 
-    <body id="bkgImg">
+    <body>
             <h3 class="booking">Booking</h3>
             <form class="book-form">
                 <select class="book-form">
@@ -38,7 +38,13 @@
                     <label class="duration"> 60min <input type="radio" name="duration" class="duration" value="60"/> </label>
                     <label class="duration"> 90min <input type="radio" name="duration" class="duration" value="90"/></label>
                     <label class="duration"> 120min <input type="radio" name="duration" class="duration" value="120"/></label>
-                </p>
+                </p><br/>
+                <label for="reservation-time" id="t">Select a time:</label>
+                <input type="datetime-local" id="reservation-time" name="reservation-time" 
+                value="2023-03-01T16:00" min="2023-03-01T00:00" max="">
+
+                <br/>
+                <input type="submit" id="confirm-book" name="confirm" value="Confirm"/>
             </form>
     </body>
 
