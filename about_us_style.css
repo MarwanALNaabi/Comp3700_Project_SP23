@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+/* header */
+*{
+   
+    padding: 0%;
+    margin: 0; 
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+li,a{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+
+}
+
 header{
     display: flex;
     justify-content: space-between;
@@ -6,28 +25,11 @@ header{
     padding: 0px 5%;
     background-color: rgb(13, 25, 55);
 } 
-*{
-    padding: 0%;
-    margin: 0; 
-    box-sizing: border-box;
-    color: #ffffff;
-    font-family: 'Times New Roman', Times, serif;
-}
 
-footer{
-    background-color: #24262b;
-    padding: 70px 0;
-    font-family: "Montserrat", sans-serif;
-}
-#backgroundImg{
-    background-image: url(About_us_Bakground_Image.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 20in;
-}
-body{
-    background-color: rgb(208, 242, 246);
-}
+ #logo{
+    cursor: pointer;
+    }
+ 
 .menu{ 
     list-style: none;
 }
@@ -41,21 +43,78 @@ body{
 }
 
 .menu li a:hover  {
-    color: aqua;}
+    color: rgb(0, 255, 255)
+    
+}
+/* end header */
+
+ /* body */
+
+#bodyContent{
+    background-color: rgb(51, 107, 113);
+    background-position: center;
+    background-size: 20in;
+}
+#AUheader{
+    color: rgb(13, 25, 55);
+    margin-top: 20px;
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 1.6%;
+    text-decoration: underline;
+}
+center{color: rgb(0, 0, 0);}
+p{
+    color:rgb(255, 255, 255);
+    font-size: 22px;
+    margin-left: 1cm;
+    text-align: left;
+    width:fit-content;
+}
+.email{
+  color: rgb(0, 0, 0) ;  
+}
+.email:hover{
+    color: red;
+}
+pre{
+    color:rgb(0, 0, 0);
+    font-size: 24px;
+    margin-left: 7cm;
+    
+}
+#pict{
+    width: 15cm;
+    height: 7cm;
+}
 
 
+body{
+    background-color: rgb(31, 85, 91);
+}
+/* end body */
+
+/* footer */
+footer{
+    background-color: #24262b;
+    padding: 70px 0;
+    font-family: "Montserrat", sans-serif;
+}
 .container{
     max-width: 1170px;
-    margin: auto;
+     margin: auto;
 }
 .row{
-    display: flex;
-    flex-wrap: wrap;
+     display: flex;
+     flex-wrap: wrap;
+}
+ul{
+    list-style: none;
 }
 .col{
     width: 50%;
-    text-transform: capitalize;
-    padding: 0 15px;
+     text-transform: capitalize;
+     padding: 0 15px;
 }
 .col h3{
     font-size: 18px;
@@ -66,17 +125,18 @@ body{
     position: relative; 
 }
 .col h3::before{
-    content:"";
-    position: absolute;
-    Left:0;
-    bottom: -10px;
-    background-color: #e91e63;
-    height: 2px;
+content:"";
+position: absolute;
+Left:0;
+bottom: -5px;
+background-color: #e91e63;
+height: 2px;
+box-sizing: border-box;
+width: 70px;
 }
 .col ul li a {
     font-size: 16px;
     text-transform: capitalize;
-    color: #ffffff;
     text-decoration: none;
     font-weight: 300;
     color: #bbbbbb;
@@ -87,6 +147,7 @@ body{
 .col ul li a:hover{
     color: #ffffff;
     padding-left: 8px;
+
 }
 
 .col h4{
@@ -97,38 +158,8 @@ body{
     font-weight: 300;
     color: #bbbbbb;
     display: block;
-    transition: all 0.3s ease;
 }
-#AUheader{
-    margin-left: 5.5cm;
-    color: rgb(13, 25, 55);
-    margin-top: 20px;
-    font-size: 4em;
-    font-weight: bold;
-    margin-bottom: 1.6%;
-    text-decoration: underline;
-}
-p{
-    color:rgb(13, 25, 55);
-    font-size: 22px;
-    margin-left: 9cm;
-    text-align: left;
-    width: 30%;
-}
-.email{
-  color: rgb(13, 25, 55) ;  
-}
-.email:hover{
-    color: red;
-}
-pre{
-    color:rgb(13, 25, 55);
-    font-size: 24px;
-    margin-left: 7cm;
-    
-}
-#pict{
-    width: 15cm;
-    height: 7cm;
-}
+/* end footer */
+
+
 
