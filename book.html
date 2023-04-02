@@ -23,27 +23,74 @@
     <body>
             <h3 class="booking">Booking</h3>
             <form class="book-form">
-                <select class="book-form">
+                <!-- for choosing the club-->
+                <select>
                     <option selected disabled>Select Club..</option>                    
                     <option value="Club1">Club1</option>
                     <option value="Club2">Club2</option>
                     <option value="Club3">Club3</option>
                     <option value="Club4">Club4</option>
                 </select>
+
+                <!-- for choosing the sport-->
                 <p id="sport-time"> Select the sport: 
                 <label class="choice-form"> foot ball <input type="radio" name="sport-choice" class="choice-form" value="foot ball"/> </label>
                 <label class="choice-form"> padel <input type="radio" name="sport-choice" class="choice-form" value="padel"/></label>
                 </p>
+
+                <!-- displaying the prices-->
+                <table border="2" style="margin-left: 4%">
+                    <th colspan="4">Prices</th>
+                    <tr align="center">
+                        <td></td>
+                        <td>60 min</td>
+                        <td>90 min</td>
+                        <td>120 min</td>
+                    </tr>
+                    <tr align="center">
+                        <td> Padel :</td>
+                        <td> 8-12 Omr</td>
+                        <td>12-16 Omr</td>
+                        <td>16-20 Omr</td>
+                    </tr>
+                    <tr align="center">
+                        <td>Foot Ball</td>
+                        <td>10-12 Omr</td>
+                        <td>N/A</td>
+                        <td>20-24 Omr</td>
+                    </tr>
+                </table>
+
+                <!-- for choosing the duration-->
                 <p id="sport-time">  Duration: 
-                    <label class="duration"> 60min <input type="radio" name="duration" class="duration" value="60"/> </label>
-                    <label class="duration"> 90min <input type="radio" name="duration" class="duration" value="90"/></label>
-                    <label class="duration"> 120min <input type="radio" name="duration" class="duration" value="120"/></label>
+                    <label class="duration"> 60min 
+                        <input type="radio" name="duration" class="duration" value="60"/> </label>
+                    <label class="duration"> 90min 
+                        <input type="radio" name="duration" class="duration" value="90"/></label>
+                    <label class="duration"> 120min
+                         <input type="radio" name="duration" class="duration" value="120"/></label>
                 </p><br/>
+
+                <!-- for choosing the time-->
                 <label for="reservation-time" id="t">Select a time:</label>
                 <input type="datetime-local" id="reservation-time" name="reservation-time" 
-                value="2023-03-01T16:00" min="2023-03-01T00:00" max="">
+                value="2023-03-01T16:00" min="2023-03-01T00:00" max=""><br/>
 
-                <br/>
+                <!-- getting the email,name, and phone number -->
+                <label class="name-phoneN">Enter your email: 
+                    <input class="name-phoneN" type="text">
+                    <br/>
+                </label>
+                <label class="name-phoneN">Enter your name: 
+                    <input class="name-phoneN" type="text">
+                    <br/>
+                </label>
+                <label class="name-phoneN">Enter your phone number: 
+                    <input class="name-phoneN" type="text">
+                    <br/>
+                </label>
+
+                <!-- for sending the data-->
                 <input type="submit" id="confirm-book" name="confirm" value="Confirm"/>
             </form>
     </body>

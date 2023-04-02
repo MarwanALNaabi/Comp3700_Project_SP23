@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+
 header{
     display: flex;
     justify-content: space-between;
@@ -21,23 +23,34 @@ body{
 .booking{
     text-decoration: underline;
     margin-top: 20px;
-    margin-left: 5.5cm;
+    margin-left: 6cm;
     font-size: 5em;
     color: rgb(13, 25, 55);
     font-weight: bold;
+}
+.name-phoneN{
+    color: rgb(13, 25, 55);
+    font-size: .7cm;
+    padding-left: 3.5%;
+    margin: .2cm;
 }
 
 select{
     inline-size: 50%;
     color: rgb(13, 25, 55);
     background-color: #ffffff;;
+    margin-top: 1.2%;
+    margin-left: 1.6cm;
+    margin-bottom: 20px;
+    font-size: 3.2ex;
 }
 
 .book-form{
     margin-top: 1%;
-    margin-left: 2.2in;
+    margin-left: 4.8in;
     margin-bottom: 20px;
     font-size: 2.9ex;
+    
 }
 #sport-time{
     color:  rgb(13, 25, 55);
@@ -59,10 +72,11 @@ select{
     color: rgb(13, 25, 55);
     font-size: 1cm;
     margin-left: 4%;
+    margin-bottom: 12px;
 }
 #t{
     color: rgb(13, 25, 55);
-    font-size: 35pt
+    font-size: 35pt;
 }
 
 
@@ -74,6 +88,17 @@ select{
     color: rgb(13, 25, 55);
     
 }
+th{
+    font-weight: bolder;
+    font-size: 3em;
+    color: rgb(13, 25, 55);
+}
+td{
+    font-size: 2em;
+    color: rgb(13, 25, 55);
+    padding: 25px;
+}
+
 
 footer{
     background-color: #24262b;
