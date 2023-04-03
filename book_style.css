@@ -83,7 +83,7 @@ select{
     margin-top: 1.2%;
     margin-left: 1.6cm;
     margin-bottom: 20px;
-    font-size: 3.2ex;
+    font-size: 1.5ex;
 }
 
 form {
@@ -95,6 +95,7 @@ form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     color: #000000;
     font-size: 30px;
+    display: block;
   }
   
   .form-group {
