@@ -91,6 +91,8 @@ pre{
 
 body{
     background-color: rgb(31, 85, 91);
+    display: flex;
+    flex-wrap: wrap;
 }
 /* end body */
 
