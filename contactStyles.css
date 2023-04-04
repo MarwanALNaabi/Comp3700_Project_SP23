@@ -61,8 +61,7 @@ h4.info{color: white;
 
 body{
     background-color: rgb(31, 85, 91);
-    display: flex;
-    flex-wrap: wrap;
+   
 }
 input[type="submit"] {
     display: block;
