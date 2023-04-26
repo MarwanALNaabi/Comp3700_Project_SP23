@@ -5,6 +5,18 @@
         <title>Sport Field Booking</title>
         <link rel="icon" type="images/x-icon" href="web Photos/2.ico"/>
         <link rel="stylesheet" href="indexStyle.css">
+        <script>
+            function displayDateTime(){
+                var today = new Date();
+                var date = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
+                var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+                document.getElementById("date").innerHTML = date;
+                document.getElementById("time").innerHTML = time;
+                document.getElementById("date").style.color = "black";
+                document.getElementById("time").style.color = "black";
+            }
+            setInterval(displayDateTime,10)
+        </script>
         
     </head>
     <header>
@@ -36,11 +48,12 @@
                 <a href="book.html"><img src="web Photos/Untitled design.svg" alt=""></a>        
             </div>
         </div>
+        <br>
         
-        
-
-
-
+        <div class="tst"></div>
+        <marquee direction="left" behavior="scroll" style="background:rgb(255, 255, 255);border:rgb(95, 86, 86) 3px SOLID; color:black " scrolldelay=70 truespeed id="text" onbounce>  
+            Welcome to Sport Field Booking Website. Today is <span id="date"></span> , and the time is <span id="time"></span>
+        </marquee> 
 
         
     </body>
