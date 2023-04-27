@@ -1,3 +1,4 @@
+<!--**The table is not visible to the user , to make it visible , change the display attribute in addStyle.css file line 143 **-->
 <html>
     <head>
         <meta charset="lutf-8"> 
@@ -15,26 +16,29 @@
         
         <h1>Sport Field Booking</h1>
         <nav>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="book.html">Book</a></li>
-                <li><a href="add.html">Add</a></li>
-                <li><a href="contact_us.html">contact us</a></li>
-                <li><a href="about_us.html">About us</a></li>
-                
-            </ul>
-        </nav>
+          <ul class="menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="book.html">Book</a></li>
+              <li><a href="add.html">Add</a></li>
+              <li><a href="questionnaire.html">questionnaire</a></li>
+              <li><a href="game.html">game</a></li>
+              <li><a href="calculate.html">calculate</a></li>
+              <li><a href="contact_us.html">contact us</a></li>
+              <li><a href="about_us.html">About us</a></li>
+          </ul>
+      </nav>
         
     </header>
     
-    <body>
-           <form >
+    <body onload="createTable()" >
+           <form id="addForm" action="" onsubmit="return checkValidation()">
+
             <label class ="fit" style=" font-weight: bolder; font-size: larger;" >
                 Please fill the required information :
             </label><br/><br/>
             
             <label class ="fit">
-                Sport Field Name :<br/> <input class="fit" type="text" name="name" required>
+                Sport Field Name :<br/> <input id="name" class="fit" type="text" name="name" required>
             </label><br/>
 
 
@@ -46,17 +50,18 @@
                 </div>
                 <div class="row">
                   <div class="col-12">
+
                     <ul>
                      <li>
-                        <label class="container">InDoor
-                          <input type="checkbox" checked="checked">
+                        <label class="container">In-Door
+                          <input id="type1" type="checkbox" checked="checked">
                           <span class="checkmark"></span>
                         </label>
                      </li>
                       
                      <li>
-                        <label class="container">OutDoor
-                          <input type="checkbox">
+                        <label class="container">Out-Door
+                          <input id="type2" type="checkbox">
                           <span class="checkmark"></span>
                         </label>
                      </li>    
@@ -67,19 +72,19 @@
 <br>
             <label class ="fit">
                 Commercial register number :<br/>
-                <input class="fit" type="text" name="num" required></label><br/>
-            <label class ="fit">Contact number : <br/><input class="fit" type="text" name="contact" required placeholder="i.e. 98765432"></label><br/>
-            <label class ="fit">E-mail address :<br/><input class="fit" type="text" name="mail" required placeholder="i.e youremail@gmail.com"></label><br/>
+                <input id="commercialNo" class="fit" type="number" name="num" required></label><br/>
+            <label class ="fit">Contact number : <br/><input id="contactNo" class="fit" type="number" name="contact" size="8" required placeholder="i.e. 98765432"></label><br/>
+            <label class ="fit">E-mail address :<br/><input id="email" class="fit" type="email" name="mail" required placeholder="i.e youremail@gmail.com"></label><br/>
              
             <label class ="fit">Type of sport :<br/>
-                <select class="fit" name="type" required>
-                    <option value="Football">Football</option>      
-                    <option value="Padel">Padel</option>
+                <select id="sportType" class="fit" name="type" required>
+                    <option id="sportType1" value="Football">Football</option>      
+                    <option id="sportType2" value="Padel">Padel</option>
 
                 </select>
             </label><br/>
             <label class ="fit">Province :<br/>
-                <select class="fit" name="type" required>
+                <select id="Province" class="fit"  required>
                     <option value="Ad Dakhiliyah">Ad Dakhiliyah</option>
                     <option value="Ad Dhahirah">Ad Dhahirah</option>
                     <option value="Al Batinah North">Al Batinah North</option>
@@ -93,18 +98,18 @@
                     <option value="Musandam">Musandam</option>
                 </select>
             </label><br/>
-            <label class ="fit">State :<br/><input name="state" type="text" placeholder="Muscat" required></label>
+            <label class ="fit">State :<br/><input id="state" name="state" type="text" placeholder="Muscat" required></label>
                 <div class="form-group">
                     <label for="time">Openning time : </label>
-                    <input type="time" id="time" name="time" required>
+                    <input id="openningTime" type="time" id="time" name="time" required>
                 </div>
                 <div class="form-group">
                     <label for="time">Closing time : </label>
-                    <input type="time" id="time" name="time" required>
+                    <input id="closingTime" type="time" id="time" name="time" required>
                 </div>
               
 
-            <label class ="fit" >Price per hour :<br/><input type="text" name="price" placeholder="OMR" required></label><br/>
+            <label class ="fit" >Price per hour :<br/><input id="price" type="number" name="price" placeholder="OMR" required></label><br/>
                
             <div class = "container">
                 <div class="row">
@@ -114,61 +119,61 @@
                 </div>
                 <div class="row">
                   <div class="col-12">
-                    <ul class="ul">
+                    <ul class="ul" id="facilities">
                       
                      <li>
                         <label class="container">Free-Wifi
-                          <input type="checkbox" checked="checked">
+                          <input type="checkbox" checked="checked"  value="Free-Wifi">
                           <span class="checkmark"></span>
                         </label>
                      </li>
                       
                      <li>
                         <label class="container">Safety deposit box
-                          <input type="checkbox">
+                          <input type="checkbox"  value="Safety deposit box">
                           <span class="checkmark"></span>
                         </label>
                      </li>
                       
                      <li>
                         <label class="container">Non-smoking area
-                          <input type="checkbox">
+                          <input type="checkbox" value="Non-smoking area">
                           <span class="checkmark"></span>
                         </label>
                      </li>
                       
                      <li>
                         <label class="container">Toilets
-                          <input type="checkbox">
+                          <input type="checkbox" value="Toilets">
                           <span class="checkmark"></span>
                         </label>
                      </li>
                       
                       <li>
                         <label class="container">Waiting area
-                          <input type="checkbox">
+                          <input type="checkbox" value="Waiting area">
                           <span class="checkmark"></span>
                         </label>
                      </li>
                      <li>
                         <label class="container">Parkings
-                          <input type="checkbox">
+                          <input type="checkbox" value="Parkings">
                           <span class="checkmark"></span>
                         </label>
                      </li>
                      <li>
                         <label class="container">Cafeteria
-                          <input type="checkbox">
+                          <input type="checkbox" value="Cafeteria">
                           <span class="checkmark"></span>
                         </label>
                      </li><li>
                         <label class="container">Shower area
-                          <input type="checkbox">
+                          <input type="checkbox" value="Shower area">
                           <span class="checkmark"></span>
                         </label>
                      </li><li>
                         <label class="container">Refreshments
-                          <input type="checkbox">
+                          <input type="checkbox" value="Refreshments">
                           <span class="checkmark"></span>
                         </label>
                      </li>
@@ -182,76 +187,195 @@
                 
                 
             </label>
-            <button type="submit" style="color: black;">Submit</button>
+           
+            <button type="submit" style="color: black;" >Submit</button>
            </form><br/>
+           
 
           <!--The table contain information about each sport Filed registered in the website , but it is invisible to the user-->
-           <table border="1pt" id="dataTable" >
-            <tr>
-                <th>Sport field name</th>
-                <th>Type of field</th>
-                <th>Commercial register number</th>
-                <th>Contact Number</th>
-                <th>E-mail</th>
-                <th>Type of Sport</th>
-                <th>Province</th>
-                <th>State</th>
-                <th>Openning time</th>
-                <th>Closing time</th>
-                <th>Price per hour</th>
-                <th>Facilities</th>
-            </tr>
+          <div id="data">
+
+          </div>
+
+        <script type="text/javascript">
+          var dataList = [];
+
+          function courtInfo(info1 , info2 , info3 , info4 , info5 , info6 , info7 , info8 , info9 , info10 , info11 , info12){
+                  var info1  = ""
+                  var info2  = ""
+                  var info3  = ""
+                  var info4  = ""
+                  var info5  = ""
+                  var info6  = ""
+                  var info7  = ""
+                  var info8  = ""
+                  var info9  = ""
+                  var info10  = ""
+                  var info11  = ""
+                  var info12  = ""
+
+                  this.info1 = info1;
+                  this.info2 = info2;
+                  this.info3 = info3;
+                  this.info4 = info4;
+                  this.info5 = info5;
+                  this.info6 = info6;
+                  this.info7 = info7;
+                  this.info8 = info8;
+                  this.info9 = info9;
+                  this.info10 = info10;
+                  this.info11 = info11;
+                  this.info12 = info12;
+          }
+          
+          function add(info1 , info2 , info3 , info4 , info5 , info6 , info7 , info8 , info9 , info10 , info11 , info12){
+               var list = [info1 , info2 , info3 , info4 , info5 , info6 , info7 , info8 , info9 , info10 , info11 , info12]
+               return list;
+
+            }
+      
+
+           
+            function createTable(){
+                var d=document.getElementById("data");
+                var table=document.createElement("table");
+                d.appendChild(table)
+                table.setAttribute("border","2");
+                table.setAttribute("width","100%");
+                table.setAttribute("id","dataTable");
+                table.setAttribute("display","none");
+
+                var dataList = add("Sport Filed Name ","Type of Field","Commercial register number","Contact Number","E-mail","Type of Sport","Province","State","Openning Time","Closing Time","Price","Facilities" );
+                
+                var row=document.createElement("tr")
+                table.appendChild(row);
+                for(var i=0 ; i < 12 ; i++){
+                    var column=document.createElement("th")
+                    row.appendChild(column);
+                    column.innerText = dataList[i];
+                }
+
+       }
+
             
-            <tr>
-              <td>Spinns</td>
-              <td>In-Door</td>
-              <td>1153454</td>
-              <td>72310088</td>
-              <td>majidalmanthari@gmail.com</td>
-              <td>Football</td>
-              <td>Muscat</td>
-              <td>Bawsher</td>
-              <td>4:30 pm</td>
-              <td>1:00 am</td>
-              <td>15 Rials</td>
-              <td>Free Wifi/Toilets/Waiting Area/Parkings</td>
-            </tr>
-    
-            <tr>
-              <td>Smash</td>
-              <td>In-Door</td>
-              <td>2816334</td>
-              <td>71013176</td>
-              <td>Smash.court@gmail.com</td>
-              <td>Padel</td>
-              <td>Muscat</td>
-              <td>Al Seeb</td>
-              <td>5:00 pm pm</td>
-              <td>12:00 am</td>
-              <td>12 Rials</td>
-              <td>Toilets/Parkings</td>
-            </tr>
-    
-            <tr>
-              <td>Tekers</td>
-              <td>Out-Door</td>
-              <td>9462976</td>
-              <td>96695859</td>
-              <td>Tekers_padel@gmail.com</td>
-              <td>Padel</td>
-              <td>Ad Dhahirah</td>
-              <td>Ibri</td>
-              <td>1:00 pm pm</td>
-              <td>1:00 am</td>
-              <td>10 Rials</td>
-              <td>Toilets/Parkings/Cafeteria/Refreshments/Shower area</td>
-            </tr>
-            </tr>
-    
-            </tr>
-        </table><br/>
+            function addInfo(){
+                     var list = validInfo();
+                     var table = document.getElementById("dataTable");
+                     var rows = table.rows.length;
+                     var row1=table.insertRow(rows);
+                     for(var i = 0 ; i < 12 ; i++){
+                        var column = document.createElement("td")
+                        row1.appendChild(column);
+                        column.innerText = list[i];
+                     }}
 
+            function validInfo(){
+                 var info1 = document.getElementById("name").value;
 
+                 var type1 = document.getElementById("type1").checked;
+                 var type2 = document.getElementById("type2").checked;
+                 var info2 = ""
+                 if(type1 && type2){
+                    info2 = "In-Door and Out-Door"
+                 }
+                 else if(type1){
+                  info2 = "In-Door"
+                 }
+                 else if(type2){
+                  info2 = "Out-Door"
+                 }
+
+                 var info3 = document.getElementById("commercialNo").value;
+                 var info4 = document.getElementById("contactNo").value;
+                 var info5 = document.getElementById("email").value;
+                 var info6 = document.getElementById("sportType").value;
+                 var info7 = document.getElementById("Province").value;
+                 var info8 = document.getElementById("state").value;
+                 var info9 = document.getElementById("openningTime").value;
+                 var info10 = document.getElementById("closingTime").value;
+                 var info11 = document.getElementById("price").value;
+
+                 var option1 = document.querySelector('#facilities input[value="Free-Wifi"]').checked;
+                 var option2 = document.querySelector('#facilities input[value="Safety deposit box"]').checked;
+                 var option3= document.querySelector('#facilities input[value="Non-smoking area"]').checked;
+                 var option4 = document.querySelector('#facilities input[value="Toilets"]').checked;
+                 var option5 = document.querySelector('#facilities input[value="Waiting area"]').checked;
+                 var option6 = document.querySelector('#facilities input[value="Parkings"]').checked;
+                 var option7 = document.querySelector('#facilities input[value="Cafeteria"]').checked;
+                 var option8 = document.querySelector('#facilities input[value="Shower area"]').checked;
+                 var option9 = document.querySelector('#facilities input[value="Refreshments"]').checked;
+                 var info12 = ""
+                 if (option1) {
+                    info12 =info12 + "Free WiFi  "
+                 }
+                 if(option2){
+                  info12 = info12+ "Safety deposit box  "
+                 }
+                 if(option3){
+                  info12 = info12 + "Non-smoking area  "
+                 }
+                 if(option4){
+                  info12 = info12 + "Toilets  "
+                 }
+                 if(option5){
+                  info12 = info12+ "Waiting area  "
+                 }
+                 if(option6){
+                  info12= info12 + "Parkings  "
+                 }
+                 if(option7){
+                  info12 = info12 +"Cafeteria  "
+                 }
+                 if(option8){
+                  info12 = info12 + "Shower area  "
+                 }
+                 if(option9){
+                  info12 = info12 + "Refreshments  "
+                 }
+                 if(info12 == ""){
+                  info12="There is no Facilities in this Court"
+                 }
+
+                 var infoList = add(info1 , info2 , info3 , info4,info5,info6,info7,info8,info9,info10,info11,info12);
+
+                 var court = courtInfo(info1 , info2 , info3 , info4 , info5 , info6 , info7 , info8 , info9 , info10 , info11 , info12)
+                 dataList.push(court)
+
+                return infoList;
+            }  
+            
+            
+            function checkValidation(){
+              
+                    let name = document.forms["addForm"]["name"];
+                    let contact = document.forms["addForm"]["contactNo"];
+                    let state = document.forms["addForm"]["state"];
+
+                    if(name.value.search(/\d/)!=-1){
+                      alert("The Sport Field Name is not Valid !")
+                      return false;
+                    }
+
+                    if(contact.value.length != 8){
+                      alert("The Contact Number is not 8 Digit Number !")
+                      return false;
+                    }
+                    
+                    if(state.value.search(/\d/)!=-1){
+                      alert("The State Name is not Valid !")
+                      return false;
+                    }
+                    var list = validInfo();
+                    addInfo(list);
+                    
+                    alert("Your Court have been added to the website.")
+                    
+                    //the return statement will be changed to true when the data base is applied.
+                    return false;
+
+            }
+            
+        </script> 
     </body>
     
     <footer>

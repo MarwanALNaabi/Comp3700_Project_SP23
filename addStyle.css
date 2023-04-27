@@ -84,7 +84,8 @@ select{
 }
 body{
     background-color: rgb(31, 85, 91);
-    
+    display: flex;
+    flex-wrap: wrap;
 }
 label {
     display: block;
@@ -139,7 +140,7 @@ button[type="submit"] {
   
 #dataTable{
   align-content: center;
-  display: none;
+   display: none; 
   }
 
 table th{
