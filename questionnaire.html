@@ -5,6 +5,7 @@
         <title>Sport Field Booking</title>
         <link rel="icon" type="images/x-icon" href="web Photos/2.ico"/>
         <link rel="stylesheet" href="questionnaire.css">
+        <script src="questionnaire.js"></script>
         
     </head>
     <header>
@@ -28,12 +29,13 @@
     
     <body>
        
-    <form action="">
+    <form action="" name="form" onsubmit="return validateForm()">
+
         <h5>Rate our Services: </h5>
         <div class="rate1" >
             <center>
                 <label for="contactChoice1">Excellent</label>
-                <input type="radio" id="contactChoice1" name="contact" value="email" class="rate"/>
+                <input type="radio" id="contactChoice1" name="contact" value="email" class="rate" checked/>
                 <label for="contactChoice2">Very Good</label>
                 <input type="radio" id="contactChoice2" name="contact" value="phone"class="rate"/>
                 <label for="contactChoice3">Good</label>
@@ -47,28 +49,44 @@
         </div>
         <br>
         <h5>What is the most page you like?</h5>
+        <select class="form-select" aria-label="Default select example" >
+            <option selected disabled>Select the page..</option>                    
+            <option value="Club1">Home Page</option>
+            <option value="Club2">Add Page</option>
+            <option value="Club3">Book Page</option>
+            <option value="Club4">Questionnaire Page</option>
+            <option value="Club1">Fun Page</option>
+            <option value="Club2">Calculate Page</option>
+            <option value="Club3">Contact us Page</option>
+            <option value="Club4">About us Page</option>
+        </select>
+
+        <br>
+        <h5>Describe your experience about the website</h5>
         <div class="likedPage">
-            <input type="text" class="fit">
+            <input type="text" class="fit" name="experience" placeholder="In one word">
         </div>
 
         <br>
         <h5>Give us your feedback about the website</h5>
-        <div class="likedPage">
-            <textarea name="" class="fit" cols="30" rows="10" placeholder="write Your feedback here" required></textarea>
+        <div class="feedback">
+            <textarea name="" class="fit" cols="30" rows="10" placeholder="write Your feedback here" ></textarea>
         </div>
 
         <br>
         <h5>Any suggestions? throw it bellow</h5>
-        <div class="likedPage">
-            <textarea name="" class="fit" cols="30" rows="10" placeholder="write Your suggestions here" required></textarea>
+        <div class="suggestions">
+            <textarea name="" class="fit" cols="30" rows="10" placeholder="write Your suggestions here" ></textarea>
         </div>
 
 <br>
         <div>
             <button type="submit">Submit</button>
         </div>
-
-
+<br>
+        <div>
+            <button type="reset">reset</button>
+        </div>
     </form>            
         
 

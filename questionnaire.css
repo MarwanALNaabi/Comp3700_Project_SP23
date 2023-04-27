@@ -85,6 +85,17 @@ button[type="submit"] {
     font-size: 16px;
     cursor: pointer;
   }
+  button[type="reset"] {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
   .fit{
     display: block;
     width: 100%;
@@ -95,8 +106,20 @@ button[type="submit"] {
     font-size: 16px;
     margin-bottom: 4px;
   }
+  select{
+    inline-size: 50%;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;;
+    margin-top: 1.2%;
+    margin-left: 1.6cm;
+    margin-bottom: 20px;
+    font-size: 1.5ex;
+}
   
   button[type="submit"]:hover {
+    background-color: #0069d9;
+  }
+  button[type="reset"]:hover {
     background-color: #0069d9;
   }
 /* end body */
