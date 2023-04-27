@@ -49,111 +49,50 @@ header{
 /* end header */
 
 
+
+/* body*/
 body{
     background-color: rgb(31, 85, 91);
 }
-center{
-    color: #000000;
-    font-size: 2cm;
-    font-weight: bold;
-}
 
-.booking{
-    text-decoration: underline;
-    margin-top: 20px;
-    margin-left: 6cm;
-    font-size: 5em;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-}
-.name-phoneN{
-    color: rgb(0, 0, 0);
-    font-size: .7cm;
-    padding-left: 3.5%;
-    margin: .2cm;
-}
-
-select{
-    inline-size: 50%;
-    color: rgb(0, 0, 0);
-    background-color: #ffffff;;
-    margin-top: 1.2%;
-    margin-left: 1.6cm;
-    margin-bottom: 20px;
-    font-size: 1.5ex;
-}
-
-form {
+#bill{
     max-width: 1000px;
     margin: 1% auto;
-    background-color: #ffffff;
+    background-color: beige;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     color: #000000;
-    font-size: 30px;
+    font-size: px;
     display: block;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: black;
-  }
-
-  
-  
-  input,
-  textarea {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: black;
-  }
-  
-  textarea {
-    height: 100px;
-  }
-  
-  button[type="submit"] {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #000000;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #0069d9;
-  }
-th{
-    font-weight: bolder;
-    font-size: 3em;
-    color: rgb(0, 0, 0);
 }
-td{
-    font-size: 2em;
-    color: rgb(0, 0, 0);
-    padding: 25px;
+label,input,p{
+    color: black;
+    margin-left: 1.2in;
+    font-size: 24px;
+}
+#billH1{
+    color: black;
+    text-decoration: underline;
+    font-size: 3.2em;
+}
+button{
+    margin-top: 25pt;
+    background-color: rgb(31, 85, 91);
+    font-size: 15pt;
+}
+.sportType{
+    color: black;
+    padding-top: 4%;
+    font-size: 2.2em;
+}
+#elderly_discount{
+    margin-left: 10pt;
 }
 
-#dataTable{
-    display: none;
-}
+
+
+
 
 /* footer */
 footer{

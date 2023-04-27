@@ -1,38 +1,99 @@
 <html>
-<head>
+    <head>
         <meta charset="lutf-8"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Sport Field Booking</title>
-        <link rel="icon" type="images/x-icon" href="web Photos/2.ico"/>
-        <link rel="stylesheet" href="calculate.css">
-</head>
-<header>
-    <a href="index.html"><img id="logo" src="web Photos/2.svg" alt="logo" width="110" height="110"></a>
+        <link rel="stylesheet" href="calculate_style.css">
+    </head>
+    <header>
+        <a href="index.html"><img id="logo" src="web Photos/2.svg" alt="logo" width="110" height="110"></a>
+        
+        <h1 style="color:rgb(255, 255, 255)">Sport Field Booking</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li><a href="add.html">Add</a></li>
+                <li><a href="questionnaire.html">questionnaire</a></li>
+                <li><a href="game.html">game</a></li>
+                <li><a href="calculate.html">calculate</a></li>
+                <li><a href="contact_us.html">contact us</a></li>
+                <li><a href="about_us.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+
     
-    <h1 style="color:rgb(255, 255, 255)">Sport Field Booking</h1>
-    <nav>
-        <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="book.html">Book</a></li>
-            <li><a href="add.html">Add</a></li>
-            <li><a href="questionnaire.html">questionnaire</a></li>
-            <li><a href="game.html">game</a></li>
-            <li><a href="calculate.html">calculate</a></li>
-            <li><a href="contact_us.html">contact us</a></li>
-            <li><a href="about_us.html">About us</a></li>
-        </ul>
-    </nav>
-    
-</header>
+    <body>
+        <div id="bill">
+            <h1 id="billH1">Bill Calculator</h1></br>
 
-<body>
-    
+            <label style="font-size: 32px; margin-left: 0%;">Are you an elderly customer, above 60-year-old: </label>
+            <input type="checkbox" id="elderly_discount" name="elderly_discount">
+
+            <h2 class="sportType">Football Field</h2>
+
+            <label for="num_hours_football">Number of Hours:</label>
+            <input type="number" id="num_hours_football" name="num_hours_football" value="1">
+            <button onclick="calculateFootball()">Calculate</button>
+            <p id="football_total">Total: 0 OMR</p>
+
+            <h2 class="sportType">Padel Court</h2>
+
+            <label for="num_hours_padel">Number of Hours:</label>
+            <input type="number" id="num_hours_padel" name="num_hours_padel" value="1">
+            <button onclick="calculatePadel()">Calculate</button>
+            <p id="padel_total">Total: 0 OMR</p>
+        </div>
+
+        <script type="text/javascript">
+            //to check whether the customer is above 60 years old
+            var discount = document.getElementById("elderly_discount");
+
+            function calculateFootball() {
+                // Get the number of hours value
+                var FootballNumHours = document.getElementById("num_hours_football").value;
+                
+                var footBallTotal = 10 ; // one hour price
+
+                //price for more than 1 hour
+                if (FootballNumHours > 1) {
+                    footBallTotal = footBallTotal * FootballNumHours;
+                }
+
+                // apply the elderly discount
+                if(discount.checked){
+                    footBallTotal = footBallTotal - (footBallTotal *0.1);
+                }
+
+                // display the total amount in OMR
+                document.getElementById("football_total").innerHTML = "Total: "+ footBallTotal+ " OMR";
+                }
+
+            function calculatePadel() {
+                // Get the number of hours value
+                var PadelnumHours = document.getElementById("num_hours_padel").value;
+
+                var padelTotal = 12; // one hour price
+
+                // if the number of hours is more than 1 = 1.5,2,2.5,3,4... 
+                if (PadelnumHours > 1) {
+                    padelTotal = padelTotal * PadelnumHours  ;
+                }
+
+                // apply the elderly discount
+                if(discount.checked){
+                    padelTotal = padelTotal - (padelTotal *0.1);
+                }
+
+                // display the total amount in OMR
+                document.getElementById("padel_total").innerHTML = "Total: "+ padelTotal+ " OMR";
+                }
+        </script>
+
+      </body>
 
 
-
-</body>
-
-<footer>
+      <footer>
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -58,14 +119,9 @@
                         <h4>Marwan ALNaabi</h4>
                         <h4>Majid ALManthari</h4>
                         <h4>Yaqoob ALBalushi</h4>
-
-
                     </ul>
-                    
                 </div>
             </div>
         </div>
-
     </footer>
 </html>
-
