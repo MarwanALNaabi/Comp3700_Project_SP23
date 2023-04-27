@@ -30,7 +30,18 @@
     <body>
        
     <form action="" name="form" onsubmit="return validateForm()">
+        <h5>Your Name:</h5>
+        <div class="name">
+            <input id="name" type="text" class="fit" name="name">
+        </div>
 
+        <br>
+        <h5>Your Email:</h5>
+        <div class="email">
+            <input id="email" type="text" class="fit" name="email" placeholder="SQU emails are excepted">
+        </div>
+
+        <br>
         <h5>Rate our Services: </h5>
         <div class="rate1" >
             <center>
@@ -49,39 +60,40 @@
         </div>
         <br>
         <h5>What is the most page you like?</h5>
-        <select class="form-select" aria-label="Default select example" >
+        <select class="form-select" aria-label="Default select example" name="select">
             <option selected disabled>Select the page..</option>                    
-            <option value="Club1">Home Page</option>
-            <option value="Club2">Add Page</option>
-            <option value="Club3">Book Page</option>
-            <option value="Club4">Questionnaire Page</option>
-            <option value="Club1">Fun Page</option>
-            <option value="Club2">Calculate Page</option>
-            <option value="Club3">Contact us Page</option>
-            <option value="Club4">About us Page</option>
+            <option value="page1">Home Page</option>
+            <option value="page2">Add Page</option>
+            <option value="page3">Book Page</option>
+            <option value="page4">Questionnaire Page</option>
+            <option value="page5">Fun Page</option>
+            <option value="page6">Calculate Page</option>
+            <option value="page7">Contact us Page</option>
+            <option value="page8">About us Page</option>
         </select>
 
         <br>
         <h5>Describe your experience about the website</h5>
-        <div class="likedPage">
-            <input type="text" class="fit" name="experience" placeholder="In one word">
+        <div class="experience">
+            <input id="experience" type="text" class="fit" name="experience" placeholder="In one word">
         </div>
 
         <br>
         <h5>Give us your feedback about the website</h5>
         <div class="feedback">
-            <textarea name="" class="fit" cols="30" rows="10" placeholder="write Your feedback here" ></textarea>
+            <textarea id="feedback" class="fit" cols="30" rows="10" placeholder="write Your feedback here" ></textarea>
         </div>
 
         <br>
         <h5>Any suggestions? throw it bellow</h5>
         <div class="suggestions">
-            <textarea name="" class="fit" cols="30" rows="10" placeholder="write Your suggestions here" ></textarea>
+            <textarea id="suggestions" class="fit" cols="30" rows="10" placeholder="write Your suggestions here" ></textarea>
         </div>
 
 <br>
         <div>
-            <button type="submit">Submit</button>
+           
+            <button type="submit" >Submit</button>
         </div>
 <br>
         <div>
@@ -128,4 +140,5 @@
 
     </footer>
 </html>
+
 
