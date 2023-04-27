@@ -1,0 +1,286 @@
+<!--
+    In this page , The user will be given some questions to answer them . The questions will be asked only to test
+    The user general informations of the football history , the type of questions will be select and shrt answer and 
+    true or False , after  the user answer the following questions and submit the answers , A message will be shown to
+    the user that shows his score.
+
+    Alogrithm :
+       *Html:
+       -Use the same header and footer of the other pages , in addition to the same css styles.
+       -In the body , add a form that includes the questions.
+       -In each question , specify the type of the question in addition adding the choices if the question has choices.
+           *select Question: specify the question and add the choices with their value.
+           *short answer questions : add the question and give the user a input box to write his answer.
+           *True and False :write the question with qiving the user to choicese true or false.
+       -Give each question a id.
+       -Add a submit button.
+
+       *JavaScrip :
+       -Create a function that reads the data from the form.
+       -save each answer of the form answer in a diffrent varaible.
+       -check if the users answer is equal to the  queston answer.
+       -create a score counter , and increase it whenever it founds a correct answer.
+       -Dispaly a message of the score to the user.
+       -Call the function whenever the submit buttton is pressed.
+-->
+
+
+<html>
+    <head>
+        <meta charset="lutf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Sport Field Booking</title>
+        <link rel="icon" type="images/x-icon" href="web Photos/2.ico"/>
+
+        <link rel="stylesheet" href="gameStyle.css">
+        <style>
+            button:hover{background-color: gray;}
+        </style>
+    </head>
+    <header>
+        <a href="index.html"><img id="logo" src="web Photos/2.svg" alt="logo" width="110" height="110"></a>
+        
+        <h1>Sport Field Booking</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="book.html">Book</a></li>
+                <li><a href="add.html">Add</a></li>
+                <li><a href="questionnaire.html">questionnaire</a></li>
+                <li><a href="game.html">game</a></li>
+                <li><a href="calculate.html">calculate</a></li>
+                <li><a href="contact_us.html">contact us</a></li>
+                <li><a href="about_us.html">About us</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    
+    <body>
+
+        <!--  Creating a Form -->
+           <form id="questions" action="" onsubmit="checkAnswers()">
+            
+            <label class ="fit" style=" font-weight: bolder; font-size: larger;" >
+                Test yourself in the following questions  :
+            </label><br/>
+            <!--  Q1 -->
+            <label class ="fit">
+                The number of goals that Argentina scored in FIFA World Cup 2022 was :<br/> <input class="fit" type="number" id="a1" name="a1" placeholder="Number of goals" required>
+            </label><br/>
+            <!--  Q2 -->
+            <label class ="fit">
+                The First match that Zinedine Zidane played in his journy was in :<br/> <input class="fit" type="number" id="a2" name="a2" placeholder="Year " required>
+            </label><br/>
+            <!--  Q3 -->
+            <label class ="fit">
+                The number of qulified teams in FIFA World Cup 2026 will be :<br/> <input class="fit" type="number" id="a3" name="a3" placeholder="Number of teams " required>
+            </label><br/>
+            <!--  Q4 -->
+            <label class ="fit">The number of matches that Cristiano Ronaldo played in Real Madrid is :<br/>
+                <select class="fit" id="a4" name="a4" required>
+                    <option value="451">451</option>
+                    <option value="438">438</option>
+                    <option value="398">398</option>
+                    <option value="386">386</option>
+                </select>
+            </label><br/>
+            <!--  Q5 -->
+            <label class ="fit">
+                The first World Cup that Brazil has won was in  :<br/> <input class="fit" type="number" id="a5" name="a5" placeholder="Year" required>
+            </label><br/>
+            <!--  Q6 -->
+            <label class ="fit">The holder of the number 21 in Chelsea club in 2014 was Diago Costa :
+                    <label> True</label><input type="radio"  name="a6" value="True"><br/>
+                    <label>False</label><input  type="radio" name="a6" value="False"><br/>
+            </label><br/>  
+            <!--  Q7 -->
+            <label class ="fit">The Champion League goal scorer in 2017 was :<br/>
+                    <select class="fit" id="a7" name="a7" required>
+                        <option value="Lionel Messi">Lionel Messi</option>
+                        <option value="Karim Benzema">Karim Benzema</option>
+                        <option value="Cristiano Ronaldo">Cristiano Ronaldo</option>
+                        <option value="Eden Hazard">Eden Hazard</option>
+                    </select>
+             </label><br/>
+            <!--  Q8 -->
+             <label class ="fit">
+                The number of Hat-tricks that Lionel Messi has achieved in Barcelona club was :<br/> <input class="fit" type="number" id="a8" name="a8" placeholder="Number of goals" required>
+            </label><br/>
+            <!--  Q9 -->
+            <label class ="fit">The first time that Kylian Mbappé achieved Hat-trick was in 2018:<br/>
+                <label>True</label><input type="radio" name="a9" value="True"><br/>
+                <label>False</label><input  type="radio" name="a9" value="False"><br/>
+            </label><br/>
+            <!--  Q10 -->
+            <label class ="fit">The FIFA World Cup  winner in 2010:<br/>
+                <select class="fit" id="a10" name="a10" required>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="Germany">Germany</option>
+                </select>
+            </label><br/>
+            <!--  Q11 -->
+            <label class ="fit">In 2007 The Golden Ball award went to :<br/>
+                <select class="fit" id="a11" name="a11" required>
+                    <option value="Kaka">Kaka</option>
+                    <option value="Fabio Cannavaro">Fabio Cannavaro</option>
+                    <option value="Ronaldinho">Ronaldinho</option>
+                    <option value="Wayne Rooney">Wayne Rooney</option>
+                </select>
+            </label><br/>
+            <!--  Q12 -->
+            <label class ="fit">The greates goal scorer of Tottenham club is Harry Kane:<br/>
+                <label>True</label><input type="radio" name="a12" value="True"><br/>
+                <label>False</label><input  type="radio" name="a12" value="False"><br/>
+            </label><br/>
+            <!--  Q13 -->
+            <label class ="fit">
+                The first El Clasico match between Cristian Ronaldo and Lionel Messi was in :<br/> <input class="fit" type="number" id="a13" name="a13" placeholder="Year " required>
+            </label><br/>
+            <!--  Q14 -->
+            <label class ="fit">The first team to win the FIFA World Cup out of their continent :<br/>
+                <select class="fit" id="a14" name="a14" required>
+                    <option value="Italy">Italy</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Uruguay">Uruguay</option>
+                </select>
+            </label><br/>
+            <!--  Q15 -->
+            <label class ="fit">
+                Luis Suárez joined Barcelona club in :<br/> <input class="fit" type="number" id="a15" name="a15" placeholder="Year " required>
+            </label><br/>
+                
+            <!--  Sumit Button -->
+            <button type="submit" style="color: black;">Submit</button>
+           </form><br/>
+
+
+           <script type="text/javascript">
+            //creating the checkanswer function.
+            function checkAnswers(){
+                //declaring the score counter.
+                var score  = 0;
+                
+
+                //read each input value , and check if it is a coorect answer.
+                var answer1 = document.getElementById("a1").value
+                if (answer1 == "7"){
+                    score = score +1
+                }
+
+                var answer2 = document.getElementById("a2").value
+                if(answer2 == "1989"){
+                    score = score +1
+                }
+
+                var answer3 = document.getElementById("a3").value
+                if(answer3 == "48"){
+                    score = score +1                }
+
+                var answer4 = document.getElementById("a4").value
+                if(answer4 == "438"){
+                    score = score +1                }
+
+                var answer5 = document.getElementById("a5").value
+                if(answer5 == "1958"){
+                    score = score +1                }
+                
+                var answer6 =  document.querySelector('input[name="a6"]:checked').value
+                if(answer6 == "False"){
+                    score = score +1                }
+                
+
+                var answer7 = document.getElementById("a7").value
+                if(answer7 == "Cristiano Ronaldo"){
+                    score = score +1                }
+
+                var answer8 = document.getElementById("a8").value
+                if(answer8 == "48"){
+                    score = score +1                }
+
+                var answer9 =  document.querySelector('input[name="a9"]:checked').value
+                if(answer9 == "False"){
+                    score = score +1    }
+
+                var answer10 = document.getElementById("a10").value
+                if(answer10 == "Spain"){
+                    score = score +1                }
+
+                var answer11 = document.getElementById("a11").value
+                if(answer11 == "Kaka"){
+                    score = score +1                }
+
+
+                var answer12 =  document.querySelector('input[name="a12"]:checked').value
+                if(answer12 == "True"){
+                    score = score +1                }
+   
+                var answer13 = document.getElementById("a13").value
+                if(answer13 == "2008"){
+                    score = score +1                }
+          
+                var answer14 = document.getElementById("a14").value
+                if(answer14 == "Uruguay"){
+                    score = score +1                }
+                 
+                var answer15 = document.getElementById("a15").value
+                if(answer15 == "2014"){
+                    score = score +1                }
+                    
+                
+                //Send a message with the score to the user.
+                if(score == 15){
+                    alert("Good ! You got all the answers Correct :) , Your score is 15/15")
+                    return;
+                }
+
+                else if(score == 0){
+                    alert("Unlucky ! You got all the answer Wrong :( , Your score is 0/15")
+                    return;
+                }
+
+                
+                 var state = "Your score is " + score +"/15"
+                 alert(state)
+                
+            }
+
+           </script>
+    </body>
+    
+    <footer>
+        <div class="container2">
+            <div class="row2">
+                <div class="col2">
+                    <h3>Website pages</h3>
+                    <ul>
+                        <li><a href="index.html">Home Page</a></li>
+                        <li><a href="book.html">Book a sport field</a></li>
+                        <li><a href="add.html">Add a sport field </a></li>
+                        <li><a href="contact_us.html">contact us</a></li>
+                        <li><a href="about_us.html">About us</a></li>                           
+                    </ul>
+                </div>
+                <div class="col2">
+                    <ul>
+                        <h3>Sultan Qaboos University</h3>
+                        <h3>College of Science</h3>
+                        <h3>Computer Science Department</h3>
+                        <h3>COMP3700 SP23 Project</h3>    
+                        <h3>Members:</h3>
+                        <h4>Marwan ALNaabi</h4>
+                        <h4>Majid ALManthari</h4>
+                        <h4>Yaqoob ALBalushi</h4>
+
+
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</html>
