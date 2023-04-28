@@ -7,11 +7,17 @@
         <link rel="stylesheet" href="indexStyle.css">
         <script>
             function displayDateTime(){
+                //Defining date object and assign it to today variable.
                 var today = new Date();
+                //set date variable to have date formula
                 var date = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
+                //set time variable to have time formula
                 var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+                //assign the date and time to span tag in html
                 document.getElementById("date").innerHTML = date;
                 document.getElementById("time").innerHTML = time;
+                // give date and time black color
                 document.getElementById("date").style.color = "black";
                 document.getElementById("time").style.color = "black";
             }
@@ -39,14 +45,14 @@
     </header>
     <body>
         
-        <img class="panner" src="web Photos/vs.svg" alt="panner" >
+        <img class="panner" src="web Photos/vs.jpg" alt="panner" >
         <div class="container2">
             <div class="box">
                 <a href="add.html"><img src="web Photos/Add a heading.svg" alt=""></a>
                 
             </div>
             <div class="box">
-                <a href="book.html"><img src="web Photos/Untitled design.svg" alt=""></a>        
+                <a href="book.html"><img src="web Photos/Untitled design.jpg" alt=""></a>        
             </div>
         </div>
         <br>
