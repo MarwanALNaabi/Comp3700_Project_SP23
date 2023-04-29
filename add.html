@@ -108,8 +108,6 @@
                     <input id="closingTime" type="time" id="time" name="time" required>
                 </div>
               
-
-            <label class ="fit" >Price per hour :<br/><input id="price" type="number" name="price" placeholder="OMR" required></label><br/>
                
             <div class = "container">
                 <div class="row">
@@ -198,9 +196,11 @@
           </div>
 
         <script type="text/javascript">
+          //create a list with the registered courts.
           var dataList = [];
-
-          function courtInfo(info1 , info2 , info3 , info4 , info5 , info6 , info7 , info8 , info9 , info10 , info11 , info12){
+          
+          //creating a constructor for each court with its own information.
+          function courtInfo(info1 , info2 , info3 , info4 , info5 , info6 , info7 , info8 , info9 , info10 , info11 ){
                   var info1  = ""
                   var info2  = ""
                   var info3  = ""
@@ -212,8 +212,7 @@
                   var info9  = ""
                   var info10  = ""
                   var info11  = ""
-                  var info12  = ""
-
+                  //setting the information of the court with the provided information from the  user.
                   this.info1 = info1;
                   this.info2 = info2;
                   this.info3 = info3;
@@ -225,17 +224,16 @@
                   this.info9 = info9;
                   this.info10 = info10;
                   this.info11 = info11;
-                  this.info12 = info12;
           }
-          
-          function add(info1 , info2 , info3 , info4 , info5 , info6 , info7 , info8 , info9 , info10 , info11 , info12){
-               var list = [info1 , info2 , info3 , info4 , info5 , info6 , info7 , info8 , info9 , info10 , info11 , info12]
+          //creating a function that turns the information of the court to a list to be used later.
+          function add(info1 , info2 , info3 , info4 , info5 , info6 , info7 , info8 , info9 , info10 , info11 ){
+               var list = [info1 , info2 , info3 , info4 , info5 , info6 , info7 , info8 , info9 , info10 , info11 ]
                return list;
 
             }
       
 
-           
+           //creating a table with the headers.
             function createTable(){
                 var d=document.getElementById("data");
                 var table=document.createElement("table");
@@ -244,12 +242,12 @@
                 table.setAttribute("width","100%");
                 table.setAttribute("id","dataTable");
                 table.setAttribute("display","none");
-
-                var dataList = add("Sport Filed Name ","Type of Field","Commercial register number","Contact Number","E-mail","Type of Sport","Province","State","Openning Time","Closing Time","Price","Facilities" );
+                //creating a list with the headers.
+                var dataList = add("Sport Filed Name ","Type of Field","Commercial register number","Contact Number","E-mail","Type of Sport","Province","State","Openning Time","Closing Time","Facilities" );
                 
                 var row=document.createElement("tr")
                 table.appendChild(row);
-                for(var i=0 ; i < 12 ; i++){
+                for(var i=0 ; i < 11 ; i++){
                     var column=document.createElement("th")
                     row.appendChild(column);
                     column.innerText = dataList[i];
@@ -257,18 +255,18 @@
 
        }
 
-            
+            //this function uses the information from the list to create a new row in the table and write the information in the proper place.
             function addInfo(){
                      var list = validInfo();
                      var table = document.getElementById("dataTable");
                      var rows = table.rows.length;
                      var row1=table.insertRow(rows);
-                     for(var i = 0 ; i < 12 ; i++){
+                     for(var i = 0 ; i < 11 ; i++){
                         var column = document.createElement("td")
                         row1.appendChild(column);
                         column.innerText = list[i];
                      }}
-
+            //this function reads the information provided from the user from the form , then it save each info to a avariable and create a new object and saves the information to a list.
             function validInfo(){
                  var info1 = document.getElementById("name").value;
 
@@ -293,7 +291,6 @@
                  var info8 = document.getElementById("state").value;
                  var info9 = document.getElementById("openningTime").value;
                  var info10 = document.getElementById("closingTime").value;
-                 var info11 = document.getElementById("price").value;
                  var option1 = document.querySelector('#facilities input[value="Free-Wifi"]').checked;
                  var option2 = document.querySelector('#facilities input[value="Safety deposit box"]').checked;
                  var option3= document.querySelector('#facilities input[value="Non-smoking area"]').checked;
@@ -303,70 +300,71 @@
                  var option7 = document.querySelector('#facilities input[value="Cafeteria"]').checked;
                  var option8 = document.querySelector('#facilities input[value="Shower area"]').checked;
                  var option9 = document.querySelector('#facilities input[value="Refreshments"]').checked;
-                 var info12 = ""
+                 var info11 = ""
                  if (option1) {
-                    info12 =info12 + "Free WiFi  "
+                    info11 =info11 + "Free WiFi  "
                  }
                  if(option2){
-                  info12 = info12+ "Safety deposit box  "
+                  info11 = info11+ "Safety deposit box  "
                  }
                  if(option3){
-                  info12 = info12 + "Non-smoking area  "
+                  info11 = info11 + "Non-smoking area  "
                  }
                  if(option4){
-                  info12 = info12 + "Toilets  "
+                  info11 = info11 + "Toilets  "
                  }
                  if(option5){
-                  info12 = info12+ "Waiting area  "
+                  info11 = info11+ "Waiting area  "
                  }
                  if(option6){
-                  info12= info12 + "Parkings  "
+                  info11= info11 + "Parkings  "
                  }
                  if(option7){
-                  info12 = info12 +"Cafeteria  "
+                  info11 = info11 +"Cafeteria  "
                  }
                  if(option8){
-                  info12 = info12 + "Shower area  "
+                  info11 = info11 + "Shower area  "
                  }
                  if(option9){
-                  info12 = info12 + "Refreshments  "
+                  info11 = info11 + "Refreshments  "
                  }
-                 if(info12 == ""){
-                  info12="There is no Facilities in this Court"
+                 if(info11 == ""){
+                  info11="There is no Facilities in this Court"
                  }
-
-                 var infoList = add(info1 , info2 , info3 , info4,info5,info6,info7,info8,info9,info10,info11,info12);
-
-                 var court = courtInfo(info1 , info2 , info3 , info4 , info5 , info6 , info7 , info8 , info9 , info10 , info11 , info12)
+                 //converting the information to a list.
+                 var infoList = add(info1 , info2 , info3 , info4,info5,info6,info7,info8,info9,info10,info11);
+                 //creating a new court object and add it to the dataList .
+                 var court = courtInfo(info1 , info2 , info3 , info4 , info5 , info6 , info7 , info8 , info9 , info10 , info11)
                  dataList.push(court)
 
                 return infoList;
             }  
             
-            
+            //this function checks if some information is valid or not , if not it will send a message to the user.
             function checkValidation(){
-              
                     let name = document.forms["addForm"]["name"];
                     let contact = document.forms["addForm"]["contactNo"];
                     let state = document.forms["addForm"]["state"];
-
+                    
+                    //checks if the name does not consist of digits.
                     if(name.value.search(/\d/)!=-1){
                       alert("The Sport Field Name is not Valid !")
                       return false;
                     }
-
+                    //checks if the phone number is 8 digit number.
                     if(contact.value.length != 8){
                       alert("The Contact Number is not 8 Digit Number !")
                       return false;
                     }
-                    
+                    //checks if the state name does not consist of digits.
                     if(state.value.search(/\d/)!=-1){
                       alert("The State Name is not Valid !")
                       return false;
                     }
+                    //if all of the information is valid , the information will be saved and will be added to the table.
                     var list = validInfo();
                     addInfo(list);
-                    
+                    // a message will be sent to the user that the court is added.
                     alert("Your Court have been added to the website.")
                     
                     //the return statement will be changed to true when the data base is applied.
