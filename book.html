@@ -110,12 +110,14 @@
             </div>
 
             <script type="text/javascript">
-
+                //to add a booking 
                 function book(clubName, sportName, date, time, duration, personName,email, phone ) {
                     var list = [clubName, sportName, date,
                      time, duration, personName,email, phone];
                     return list
                 }
+
+                // list contains the sport name, duration and the duration's price
                 const booking = [
                 { sportName: 'Padel', duration: '60 min', price: 12 },
                 { sportName: 'Padel', duration: '90 min', price: 18 },
@@ -125,17 +127,17 @@
                 { sportName: 'Football', duration: '120 min', price: 20 }
                 ];
 
-                //to check if the football or padel is choosen 
+                //to check if the football or padel is choosen or shown
                 var Fcheck = document.getElementById("footballchoice");
                 var Pcheck = document.getElementById("padelchoice");
                 var footBallShown = false;
                 var padelShown = false;
-                function displayPrice(){
 
+                function displayPrice(){
                     const table = document.querySelector('table');
                     const tbody = table.querySelector('tbody');
+
                     //if the user chooses football display the table prices for football
-                    
                     if (Fcheck.checked){
                         if(!footBallShown){
                         for (let i = 3; i < booking.length; i++) {
@@ -144,11 +146,12 @@
                             const sportNameCell = row.insertCell();
                             const durationCell = row.insertCell();
                             const priceCell = row.insertCell();
-
+                            //add the information to the table
                             sportNameCell.textContent = sport.sportName;
                             durationCell.textContent = sport.duration;
                             priceCell.textContent = sport.price;
                         } 
+                        // to not show it more than 1
                         footBallShown = true;
                     }
                 }
@@ -163,15 +166,17 @@
                             const sportNameCell = row.insertCell();
                             const durationCell = row.insertCell();
                             const priceCell = row.insertCell();
-
+                            //add the information to the table
                             sportNameCell.textContent = sport.sportName;
                             durationCell.textContent = sport.duration;
                             priceCell.textContent = sport.price;
                         }
+                        // to not show it more than 1
                         padelShown = true;
                     }
                     }
                 }  
+                //create the table with booking information - hidden 
                 function createTable(){
                     var div =document.getElementById("bookingData");
                     var table=document.createElement("table");
@@ -181,19 +186,22 @@
                     table.setAttribute("id","dataTable");
                     table.setAttribute("display","none");
 
-                    var dataList = book("Sport Field Name ", "sport Name","date", 
-                    "time","duration",
-                    "person name", "E-mail","phone number");
+                    //heading of the table
+                    var dataList = book("Sport Field Name ", "Sport Name","Date", 
+                    "Time","Duration",
+                    "Name", "E-mail","Phone number");
                     
                     var row=document.createElement("tr")
                     table.appendChild(row);
                     for(var i=0 ; i < 8 ; i++){
+                        //add elemnts to the table
                         var column=document.createElement("th");
                         row.appendChild(column);
                         column.innerText = dataList[i];
                     }
                 }
 
+                // to add the information to the table about the reservation
                 function addInfo(){
                      var list = confirmInfo();
                      var table = document.getElementById("dataTable");
@@ -206,12 +214,13 @@
                     }    
                 }
 
+                // to get the booking information from the form
                 function confirmInfo(){
-                var info1 = document.getElementById("clubName").value;
+                var info1 = document.getElementById("clubName").value; //gets club name
 
                 var sportType1 = document.getElementById("footballchoice").checked;
                 var sportType2 = document.getElementById("padelchoice").checked;
-                var info2 = ""
+                var info2 = "" //for the sport type
                 if(sportType1){
                     info2 = "Foot Ball"
                 }
@@ -219,17 +228,20 @@
                     info2 = "Padel"
                 }
 
-                var info3 = document.getElementById("date").value;
-                var info4 = document.getElementById("time").value;
-                var info5 = document.getElementById("duration").value;
-                var info6 = document.getElementById("name").value;
-                var info7 = document.getElementById("email").value;
-                var info8 = document.getElementById("phone").value;
+                var info3 = document.getElementById("date").value; // gets the date
+                var info4 = document.getElementById("time").value; //gets the time 
+                var info5 = document.getElementById("duration").value; // gets the duration
+                var info6 = document.getElementById("name").value; //gets the name of the costumer
+                var info7 = document.getElementById("email").value; //gets the email
+                var info8 = document.getElementById("phone").value; // gets the phone number
 
+                // add a booking as a list
                 var infoList = book(info1 , info2 , info3 , info4
                  , info5, info6, info7, info8);
                 return infoList;
-            }  add
+            }
+
+            // to validate the name and phone number from the form
             function checkValidation(){
               
               let name = document.forms["book-form"]["name"];
@@ -245,6 +257,7 @@
                 return false;
               }
               
+              // if information is valid then add the reservation
               var list = confirmInfo();
               addInfo(list);
               alert("Booking confirmed.")
