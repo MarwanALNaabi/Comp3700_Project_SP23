@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+
+
+/* header */
+*{
+    padding: 0%;
+    margin: 0; 
+    box-sizing: border-box;
+    color: #000000;
+    background-color: rgb(31, 85, 91);
+}
+
+
+/* body */
+ 
+
+button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  th{
+    font-weight: bolder;
+    font-size: 25;
+    color: rgb(255, 255, 255);
+}
+td{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+  
+
+
+
+
+
+/* end footer 
+
+<link rel="stylesheet" href="q.css">
+        <table border="1" style="border-collapse: collapse;">
+            <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Rate</th>
+            <th>Most liked page</th>
+            <th>Experience</th>
+            <th>Feedback</th>
+            <th>Suggestion</th>
+            </tr><?php
+            if(mysqli_num_rows($result)==0) 
+            { echo "No students were found";}
+            else{
+                while($row = mysqli_fetch_assoc($result)){ 
+                    echo "<tr>".
+                         "<td>".$row["name"]."</td>".
+                         "<td>".$row["email"]."</td>".
+                         "<td>".$row["mostLiked"]."</td>".
+                         "<td>".$row["experience"]."</td>".
+                         "<td>".$row["feedback"]."</td>".
+                         "<td>".$row["suggestions"]."</td>".
+                         "</tr>";
+                   }
+            }
+              
+               
+            
+            ?>
+        </table>
+
+*/
+
