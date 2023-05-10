@@ -29,7 +29,7 @@
     
     <body>
        
-    <form action="" name="form" onsubmit="return validateForm()">
+    <form action="http://localhost:4555/questionnaire.php" name="form" onsubmit="return validateForm()" method="post">
         <h5>Your Name:</h5>
         <div class="name">
             <input id="name" type="text" class="fit" name="name">
@@ -46,30 +46,30 @@
         <div class="rate1" >
             <center>
                 <label for="contactChoice1">Excellent</label>
-                <input type="radio" id="contactChoice1" name="contact" value="email" class="rate" checked/>
+                <input type="radio" id="contactChoice1" name="rate" value="Excellent" class="rate" checked/>
                 <label for="contactChoice2">Very Good</label>
-                <input type="radio" id="contactChoice2" name="contact" value="phone"class="rate"/>
+                <input type="radio" id="contactChoice2" name="rate" value="Very Good"class="rate"/>
                 <label for="contactChoice3">Good</label>
-                <input type="radio" id="contactChoice3" name="contact" value="mail" class="rate"/>
+                <input type="radio" id="contactChoice3" name="rate" value="Good" class="rate"/>
                 <label for="contactChoice4">Bad</label>
-                <input type="radio" id="contactChoice1" name="contact" value="email" class="rate"/>
+                <input type="radio" id="contactChoice1" name="rate" value="Bad" class="rate"/>
                 <label for="contactChoice5">Very Bad</label>
-                <input type="radio" id="contactChoice2" name="contact" value="phone"class="rate"/>
+                <input type="radio" id="contactChoice2" name="rate" value="Very Bad"class="rate"/>
             </center>
             
         </div>
         <br>
         <h5>What is the most page you like?</h5>
         <select class="form-select" aria-label="Default select example" name="select">
-            <option selected disabled>Select the page..</option>                    
-            <option value="page1">Home Page</option>
-            <option value="page2">Add Page</option>
-            <option value="page3">Book Page</option>
-            <option value="page4">Questionnaire Page</option>
-            <option value="page5">Fun Page</option>
-            <option value="page6">Calculate Page</option>
-            <option value="page7">Contact us Page</option>
-            <option value="page8">About us Page</option>
+            <option selected disabled value="Non">Select the page..</option>                    
+            <option value="Home Page">Home Page</option>
+            <option value="Add Page">Add Page</option>
+            <option value="Book Page">Book Page</option>
+            <option value="Questionnaire Page">Questionnaire Page</option>
+            <option value="Fun Page">Fun Page</option>
+            <option value="Calculate Page">Calculate Page</option>
+            <option value="Contact us Page">Contact us Page</option>
+            <option value="About us Page">About us Page</option>
         </select>
 
         <br>
@@ -81,23 +81,23 @@
         <br>
         <h5>Give us your feedback about the website</h5>
         <div class="feedback">
-            <textarea id="feedback" class="fit" cols="30" rows="10" placeholder="write Your feedback here" ></textarea>
+            <textarea id="feedback" class="fit" cols="30" rows="10" name="feedback" placeholder="write Your feedback here" ></textarea>
         </div>
 
         <br>
         <h5>Any suggestions? throw it bellow</h5>
         <div class="suggestions">
-            <textarea id="suggestions" class="fit" cols="30" rows="10" placeholder="write Your suggestions here" ></textarea>
+            <textarea id="suggestions" name="suggestion" class="fit" cols="30" rows="10" placeholder="write Your suggestions here" ></textarea>
         </div>
 
 <br>
         <div>
            
-            <button type="submit" >Submit</button>
+            <button type="submit" name="submit">Submit</button>
         </div>
 <br>
         <div>
-            <button type="reset">reset</button>
+            <button type="reset" name="reset">reset</button>
         </div>
     </form>            
         
@@ -140,5 +140,6 @@
 
     </footer>
 </html>
+
 
 
