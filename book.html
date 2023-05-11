@@ -70,15 +70,15 @@
                 <!-- for choosing the duration-->
             <div class="form-group">
             <label for="date">Date:</label>
-            <input type="date" id="date" name="date" required>
+            <input type="date" id="date" name="date" class="date" required>
           </div>
             <div class="form-group">
               <label for="time">Time:</label>
-              <input type="time" id="time" name="time" required>
+              <input type="time" id="time" name="time" class="time" required>
             </div>
             <div class="form-group">
               <label for="duration">Duration:</label>
-              <select id="duration" name="duration" required>
+              <select id="duration" name="duration" class="duration" required>
                 <option value="" disabled selected>Select Duration</option>
                 <option value="1">1 hour</option>
                 <option value="1.5">1.5 hours</option>
@@ -87,19 +87,19 @@
             </div>
             <div class="form-group">
               <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required>
+              <input type="text" id="name" name="name" class="name" required>
             </div>
             <div class="form-group">
               <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required placeholder="i.e. youremail@gmial.com">
+              <input type="email" id="email" name="email" class="email" required placeholder="i.e. youremail@gmial.com">
             </div>
             <div class="form-group">
               <label for="phone">Phone:</label>
-              <input type="tel" id="phone" name="phone" required placeholder="i.e. 98765432">
+              <input type="tel" id="phone" name="phone" class="phone" required placeholder="i.e. 98765432">
             </div>
             <div class="form-group">
               <label for="message">Additional Comments:</label>
-              <textarea id="message" name="message"></textarea>
+              <textarea id="message" name="message" class="comment"></textarea>
             </div>
             <button type="submit">Book Now</button>
             </form>
@@ -274,9 +274,8 @@
               // if information is valid then add the reservation
               var list = confirmInfo();
               addInfo(list);
-              alert("Booking confirmed. " + "Your Booking number is ' "+ this.reservationNumber()+ " ' ")
+              alert("Booking confirmed. ")
 
-              //the return statement will be changed to true when the data base is applied.
               return false;
             }
             
