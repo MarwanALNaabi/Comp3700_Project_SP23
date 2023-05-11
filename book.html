@@ -117,6 +117,20 @@
                     return list
                 }
 
+                function reservationNumber(){
+                    var flag = true;
+                    var i = 1;
+                    var reservationList = [];
+                    while(flag){
+                        while(reservationList[i] != null){
+                            i++;
+                        }
+                        reservationList[i]= i;
+                        flag = false;
+                    }
+                    return i;
+                }
+
                 // list contains the sport name, duration and the duration's price
                 const booking = [
                 { sportName: 'Padel', duration: '60 min', price: 12 },
@@ -260,7 +274,7 @@
               // if information is valid then add the reservation
               var list = confirmInfo();
               addInfo(list);
-              alert("Booking confirmed.")
+              alert("Booking confirmed. " + "Your Booking number is ' "+ this.reservationNumber()+ " ' ")
 
               //the return statement will be changed to true when the data base is applied.
               return false;
