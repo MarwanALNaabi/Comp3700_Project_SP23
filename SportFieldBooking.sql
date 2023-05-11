@@ -57,6 +57,7 @@ CREATE TABLE `bookDB` (
   `email` varchar(100) NOT NULL,
   `phone` int(8) NOT NULL,
   `comment` varchar(700) DEFAULT NULL
+  `reservationNumber` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
