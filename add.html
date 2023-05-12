@@ -25,14 +25,13 @@
               <li><a href="calculate.html">calculate</a></li>
               <li><a href="contact_us.html">contact us</a></li>
               <li><a href="about_us.html">About us</a></li>
-              <li><a href="https://localhost:4555/search.php">Search</a></li>
           </ul>
       </nav>
         
     </header>
     
     <body onload="createTable()" >
-           <form id="addForm" action="" onsubmit="return checkValidation()">
+           <form id="addForm" action="http://localhost/add.php" method="post" onsubmit="return checkValidation()">
 
             <label class ="fit" style=" font-weight: bolder; font-size: larger;" >
                 Please fill the required information :
@@ -55,14 +54,14 @@
                     <ul>
                      <li>
                         <label class="container">In-Door
-                          <input id="type1" type="checkbox" checked="checked">
+                          <input id="type1" name="type1" type="checkbox" checked="checked">
                           <span class="checkmark"></span>
                         </label>
                      </li>
                       
                      <li>
                         <label class="container">Out-Door
-                          <input id="type2" type="checkbox">
+                          <input id="type2" type="checkbox" name="type2">
                           <span class="checkmark"></span>
                         </label>
                      </li>    
@@ -73,19 +72,19 @@
 <br>
             <label class ="fit">
                 Commercial register number :<br/>
-                <input id="commercialNo" class="fit" type="number" name="num" required></label><br/>
-            <label class ="fit">Contact number : <br/><input id="contactNo" class="fit" type="number" name="contact" size="8" required placeholder="i.e. 98765432"></label><br/>
-            <label class ="fit">E-mail address :<br/><input id="email" class="fit" type="email" name="mail" required placeholder="i.e youremail@gmail.com"></label><br/>
+                <input id="commercialNo" class="fit" type="number" name="commercialNo" required></label><br/>
+            <label class ="fit">Contact number : <br/><input id="contactNo" class="fit" type="number" name="contactNo" size="8" required placeholder="i.e. 98765432"></label><br/>
+            <label class ="fit">E-mail address :<br/><input id="email" class="fit" type="email" name="email" required placeholder="i.e youremail@gmail.com"></label><br/>
              
             <label class ="fit">Type of sport :<br/>
-                <select id="sportType" class="fit" name="type" required>
+                <select id="sportType" class="fit" name="sportType" required>
                     <option id="sportType1" value="Football">Football</option>      
                     <option id="sportType2" value="Padel">Padel</option>
 
                 </select>
             </label><br/>
             <label class ="fit">Province :<br/>
-                <select id="Province" class="fit"  required>
+                <select name="Province" id="Province" class="fit"  required>
                     <option value="Ad Dakhiliyah">Ad Dakhiliyah</option>
                     <option value="Ad Dhahirah">Ad Dhahirah</option>
                     <option value="Al Batinah North">Al Batinah North</option>
@@ -102,11 +101,11 @@
             <label class ="fit">State :<br/><input id="state" name="state" type="text" placeholder="Muscat" required></label>
                 <div class="form-group">
                     <label for="time">Openning time : </label>
-                    <input id="openningTime" type="time" id="time" name="time" required>
+                    <input id="openningTime" type="time"  name="openningTime" required>
                 </div>
                 <div class="form-group">
                     <label for="time">Closing time : </label>
-                    <input id="closingTime" type="time" id="time" name="time" required>
+                    <input id="closingTime" type="time"  name="closingTime" required>
                 </div>
               
                
@@ -122,57 +121,57 @@
                       
                      <li>
                         <label class="container">Free-Wifi
-                          <input type="checkbox" checked="checked"  value="Free-Wifi">
+                          <input type="checkbox" checked="checked" name="Free-Wifi"  value="Free-Wifi">
                           <span class="checkmark"></span>
                         </label>
                      </li>
                       
                      <li>
                         <label class="container">Safety deposit box
-                          <input type="checkbox"  value="Safety deposit box">
+                          <input type="checkbox" name="Safety-deposit-box"  value="Safety deposit box">
                           <span class="checkmark"></span>
                         </label>
                      </li>
                       
                      <li>
                         <label class="container">Non-smoking area
-                          <input type="checkbox" value="Non-smoking area">
+                          <input type="checkbox" name="Non-smoking-area" value="Non-smoking area">
                           <span class="checkmark"></span>
                         </label>
                      </li>
                       
                      <li>
                         <label class="container">Toilets
-                          <input type="checkbox" value="Toilets">
+                          <input type="checkbox" name="Toilets" value="Toilets">
                           <span class="checkmark"></span>
                         </label>
                      </li>
                       
                       <li>
                         <label class="container">Waiting area
-                          <input type="checkbox" value="Waiting area">
+                          <input type="checkbox" name="Waiting-area" value="Waiting area">
                           <span class="checkmark"></span>
                         </label>
                      </li>
                      <li>
                         <label class="container">Parkings
-                          <input type="checkbox" value="Parkings">
+                          <input type="checkbox" name="Parkings" value="Parkings">
                           <span class="checkmark"></span>
                         </label>
                      </li>
                      <li>
                         <label class="container">Cafeteria
-                          <input type="checkbox" value="Cafeteria">
+                          <input type="checkbox" name="Cafeteria" value="Cafeteria">
                           <span class="checkmark"></span>
                         </label>
                      </li><li>
                         <label class="container">Shower area
-                          <input type="checkbox" value="Shower area">
+                          <input type="checkbox" name="Shower-area" value="Shower area">
                           <span class="checkmark"></span>
                         </label>
                      </li><li>
                         <label class="container">Refreshments
-                          <input type="checkbox" value="Refreshments">
+                          <input type="checkbox" name="Refreshments" value="Refreshments">
                           <span class="checkmark"></span>
                         </label>
                      </li>
@@ -189,8 +188,16 @@
            
             <button type="submit" style="color: black;" >Submit</button>
            </form><br/>
-           
 
+
+           <form id="deleteForm" action="http://localhost/deleteCourt.php" method="post">
+            <label class ="fit">
+            Enter the commercial register number to delete the court:<br/>
+            <input id="deleteCourt" class="fit" type="number" name="deleteCourt" required placeholder="Commertial Reg.NO :">
+            <button type="submit" style="color: black;" >Submit</button>
+            </label><br/>
+           </form>
+         
           <!--The table contain information about each sport Filed registered in the website , but it is invisible to the user-->
           <div id="data">
 
@@ -366,10 +373,10 @@
                     var list = validInfo();
                     addInfo(list);
                     // a message will be sent to the user that the court is added.
-                    alert("Your Court have been added to the website.")
+                    
                     
                     //the return statement will be changed to true when the data base is applied.
-                    return false;
+                    return true;
 
             }
             
@@ -389,8 +396,7 @@
                       <li><a href="game.html">game</a></li>
                       <li><a href="calculate.html">calculate</a></li>
                       <li><a href="contact_us.html">contact us</a></li>
-                      <li><a href="about_us.html">About us</a></li>
-                      <li><a href="https://localhost:4555/search.php">Search</a></li>                           
+                      <li><a href="about_us.html">About us</a></li>                           
                   </ul>
               </div>
               <div class="col">
