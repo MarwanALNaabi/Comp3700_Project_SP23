@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="q.css">
         <center>
         
-        <a href="https://sportfieldbooking.000webhostapp.com/add.html"><button>Return</button></a><br><br>
+        <a href="https://sportfieldbooking.000webhostapp.com/book.php"><button>Return</button></a><br>
         <table border="1" style="width:70%;border-collapse: collapse;">
             <tr>
             <th>Name</th>
@@ -36,7 +36,7 @@
                         {
                         while ($record=mysqli_fetch_assoc($result)){
                             
-                            echo("<td>".$name=$record['name']);
+                            echo("<tr><td>".$name=$record['name']);
                             echo("<td>".$typeOfField=$record['typeOfField']);
                             echo("<td>".$number=$record['number']);
                             echo("<td>".$email=$record['email']);

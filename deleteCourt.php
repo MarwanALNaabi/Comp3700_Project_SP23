@@ -2,9 +2,9 @@
 $courtNum = $_POST['deleteCourt'];
 
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "sportfieldbooking";
+$username = "id20504934_webproject";
+$password = "Webproject@2023";//
+$dbname = "id20504934_sportfieldbooking";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -20,7 +20,10 @@ if(mysqli_affected_rows($conn) > 0){
 else{
     print("This commercial number does not exist !");}
 
-    
+    echo("<link rel=\"stylesheet\" href=\"q.css\">");
+    echo("<a href=\"https://sportfieldbooking.000webhostapp.com//add.html\"><button>Return</button></a><br>");
 mysqli_close($conn);
 
 ?>
+<br>
+     

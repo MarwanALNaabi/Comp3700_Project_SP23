@@ -9,9 +9,9 @@ $suggestion = $_POST["suggestion"];
 
 
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "SportFieldBooking";
+$username = "id20504934_webproject";
+$password = "Webproject@2023";//
+$dbname = "id20504934_sportfieldbooking";
 //Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -31,7 +31,7 @@ $result2 = mysqli_query($conn, $sql2);
         <p>The record has been added successfully</p>
         
         <br>
-        <a href="http://127.0.0.1:5500/questionnaire.html"><button>Return</button></a><br>
+        <a href="https://sportfieldbooking.000webhostapp.com/questionnaire.html"><button>Return</button></a><br>
         <table border="1" style="width:70%;border-collapse: collapse;">
             <tr>
             <th>Name</th>
@@ -44,9 +44,9 @@ $result2 = mysqli_query($conn, $sql2);
             </tr>
             <?php
             $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "SportFieldBooking";
+            $username = "id20504934_webproject";
+            $password = "Webproject@2023";//
+            $dbname = "id20504934_sportfieldbooking";
             $conn = new mysqli($servername, $username, $password, $dbname);
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);

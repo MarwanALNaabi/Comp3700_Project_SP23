@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "SportFieldBooking";
+$username = "id20504934_webproject";
+$password = "Webproject@2023";//
+$dbname = "id20504934_sportfieldbooking";
 
 //check connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -13,62 +13,47 @@ else{
     echo("Connected Successfully");
 }
 
-//get the data from the form
-$club = $_POST["form-select"];
-$sport = $_POST["sport-choice"];
-$date = $_POST["date"];
-$time = $_POST["time"];
-$duration = $_POST["duration"];
-$name = $_POST["name"];
-$email = $_POST["email"];
-$phone = $_POST["phone"];
-$comment = $_POST["message"];
 
 
 // to add the reservation with the reservation number 
-function reservationNumber(){
-    $flag = true;
-    $i=0;
-    $list = array();
-    while($flag){
-        while($list != null){
-            $i++;
-        }
-        array_push($list, $i+1);
-        $flag = false;
-    }
-    return $i+1;
-}
-$reservationN = $this.reservationNumber();
+function generateRandomNumber($conn,$len=4){
+    $randomString = substr(MD5(time()),$len);
 
+    //Check newly generated Code exist in DB table or not.
+    $query = "select * from bookDB where ReservationNumber='".$randomString."'";
+    $result=mysqli_query($conn,$query);
+    $resultCount=mysqli_num_rows($result);
 
-
-$sqlB = "insert into `bookDB`(club, type, date, time, duration, name, email, phone, comment, ReservationNumber)"."values('$club', '$sport',
- '$date', '$time', '$duration', '$name', '$email', '$phone', '$comment', '$reservationN')";
-
-$resultBook = mysqli_query($conn, $sqlB);
-
-
-$cancelBooking = $_POST["cancelbooking"];
-for ($j=0 ; $j < sizeof($list); $j++){
-    if($list[$j] == $cancelBooking){
-        $sqlD = "delete from `bookDB` where ReservationNumber = $list[$j]";
-        print("<p> Your reservation is Canceled. </p>");
-        break;
-    }
-    if($list[$j] > $cancelBooking){
-        print("<p> Reservation NOT found. </p>");
-        break;
+    if($resultCount>0){
+        //IF code is already exist then function will call it self until unique code has been generated and inserted in Db.
+        generateRandomNumber($conn);
+    }else{
+        //Unique generated code will be inserted in DB.
+        $club = $_POST["form-select"];
+        $sport = $_POST["sport-choice"];
+        $date = $_POST["date"];
+        $time = $_POST["time"];
+        $duration = $_POST["duration"];
+        $name = $_POST["name"];
+        $email = $_POST["email"];
+        $phone = $_POST["phone"];
+        $comment = $_POST["message"];
+        $sql = "INSERT INTO bookDB(club, type, date, time, duration, name, email, phone, comment, ReservationNumber) VALUES ('$club', '$sport',
+        '$date', '$time', '$duration', '$name', '$email', '$phone', '$comment', '$randomString')";
+        $result = mysqli_query($conn,$sql);
+        echo "<br>Reservation Successfully Booked.";
+        echo "<br>Your Reservation Number is: " .$randomString." Please Do not miss it";
+        return $randomString;
     }
 }
+generateRandomNumber($conn)
+
 
 ?>
 
-<link rel="stylesheet" href="b.css">
-    <p>The record has been added successfully</p>
-        
+<link rel="stylesheet" href="b.css">        
     <br>
-    <a href="http://127.0.0.1:5500/questionnaire.html"><button>Return</button></a><br>
+    <a href="https://sportfieldbooking.000webhostapp.com/book.php"><button>Return</button></a><br>
 
 
 

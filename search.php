@@ -10,14 +10,14 @@
         <nav>
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="book.html">Book</a></li>
+                <li><a href="https://sportfieldbooking.000webhostapp.com/book.php">Book</a></li>
                 <li><a href="add.html">Add</a></li>
                 <li><a href="questionnaire.html">questionnaire</a></li>
                 <li><a href="game.html">game</a></li>
                 <li><a href="calculate.html">calculate</a></li>
                 <li><a href="contact_us.html">contact us</a></li>
                 <li><a href="about_us.html">About us</a></li>
-                <li><a href="http://localhost:4555/search.php">Search</a></li>
+                <li><a href="https://sportfieldbooking.000webhostapp.com/search.php">Search</a></li>
             </ul>
         </nav>
         
@@ -25,13 +25,13 @@
 
     <body>
         <center>
-        <form action="http://localhost:4555/search.php" method="post" id="book-form" name="book-form">
+        <form action="https://sportfieldbooking.000webhostapp.com/search.php" method="post" id="book-form" name="book-form">
             <input type="text" name="search" id="search" placeholder="Search for a reservation using the given ID" required>
             <button name="submit">Search</button>
             <?php
             $servername = "localhost";
-            $username = "root";
-            $password = "";
+            $username = "id20504934_webproject";
+            $password = "Webproject@2023";//
             $dbname = "id20504934_sportfieldbooking";
             $conn = new mysqli($servername, $username, $password, $dbname);
             if ($conn->connect_error) {
@@ -42,6 +42,8 @@
             //$search = "Marwan.yn71@gmail.com";
                 if(isset($_POST['submit'])){
                 $search=$_POST['search'];
+                $search=intval($search);
+
                 $sql="SELECT * FROM bookDB where phone like '$search'";
                 $result = mysqli_query($conn,$sql);
                 echo("<br>Connected to DB successfully");
@@ -54,7 +56,6 @@
                     <tr>
                     <th>Club Name</th>
                     <th>Type</th>
-                    <th>Rate</th>
                     <th>Date</th>
                     <th>Time</th>
                     <th>Duration</th>
@@ -84,7 +85,6 @@
 
                 }
                 
-                
         
       
         ?>
@@ -101,14 +101,14 @@
                     <h3>Website pages</h3>
                     <ul>
                         <li><a href="index.html">Home Page</a></li>
-                        <li><a href="book.html">Book a sport field</a></li>
+                        <li><a href="https://sportfieldbooking.000webhostapp.com/book.php">Book</a></li>
                         <li><a href="add.html">Add a sport field </a></li>
                         <li><a href="questionnaire.html">questionnaire</a></li>
                         <li><a href="game.html">game</a></li>
                         <li><a href="calculate.html">calculate</a></li>
                         <li><a href="contact_us.html">contact us</a></li>
                         <li><a href="about_us.html">About us</a></li>      
-                        <li><a href="http://localhost:4555/search.php">Search</a></li>                     
+                        <li><a href="https://sportfieldbooking.000webhostapp.com/search.php">Search</a></li>                     
                     </ul>
                 </div>
                 <div class="col">
