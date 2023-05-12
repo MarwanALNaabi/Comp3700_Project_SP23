@@ -42,7 +42,7 @@
             //$search = "Marwan.yn71@gmail.com";
                 if(isset($_POST['submit'])){
                 $search=$_POST['search'];
-                $sql="SELECT * FROM QuestionnaireDB where email like '$search'";
+                $sql="SELECT * FROM bookDB where phone like '$search'";
                 $result = mysqli_query($conn,$sql);
                 echo("<br>Connected to DB successfully");
                 $num=mysqli_num_rows($result);
@@ -52,23 +52,28 @@
                     echo'
                     <table border="1" style="width:70%;border-collapse: collapse;">
                     <tr>
-                    <th>Name</th>
-                    <th>Email</th>
+                    <th>Club Name</th>
+                    <th>Type</th>
                     <th>Rate</th>
-                    <th>Most liked page</th>
-                    <th>Experience</th>
-                    <th>Feedback</th>
-                    <th>Suggestion</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Duration</th>
+                    <th>email</th>
+                    <th>Phone No.</th>
+                    <th>Comment</th>
+                    <th>Reservation Number</th>
                     </tr>
                     ';
                     while ($record=mysqli_fetch_assoc($result)){
-                        echo("<tr><td>".$name=$record['name']);
+                        echo("<tr><td>".$club=$record['club']);
+                        echo("<td>".$type=$record['type']);
+                        echo("<td>".$date=$record['date']);
+                        echo("<td>".$time=$record['time']);
+                        echo("<td>".$duration=$record['duration']);
                         echo("<td>".$email=$record['email']);
-                        echo("<td>".$rate=$record['rating']);
-                        echo("<td>".$mostLiked=$record['mostLiked']);
-                        echo("<td>".$experience=$record['experience']);
-                        echo("<td>".$feedback=$record['feedback']);
-                        echo("<td>".$suggestion=$record['suggestions']);
+                        echo("<td>".$phone=$record['phone']);
+                        echo("<td>".$comment=$record['comment']);
+                        echo("<td>".$ReservationNumber=$record['ReservationNumber']);
                         
                         
                     }
