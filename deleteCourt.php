@@ -1,29 +1,28 @@
+
 <?php
+//read  the commertial number from the form, and save it in a variable.
 $courtNum = $_POST['deleteCourt'];
-
+//defining the name of the database , servername , username and password.
 $servername = "localhost";
-$username = "id20504934_webproject";
-$password = "Webproject@2023";//
-$dbname = "id20504934_sportfieldbooking";
-
+$username = "root";
+$password = "";
+$dbname = "sportfieldbooking";
+//creating  a connection to the data base.
 $conn = new mysqli($servername, $username, $password, $dbname);
-
+//checking if the connection exists., if not ; die.
 if($conn->connect_error){
     die("Connection failed: " . $conn->connect_error);
 }
-
-$sql = "DELETE FROM courts WHERE commercialnumber='$courtNum'";
+//deleting the record if it exists.
+$sql = "DELETE from courts where commercialnumber='$courtNum'";
 $result = mysqli_query($conn,$sql);
-
+//check if there was any change in the database.
 if(mysqli_affected_rows($conn) > 0){
     print("Court with commercial number $courtNum is deleted");}
 else{
     print("This commercial number does not exist !");}
 
-    echo("<link rel=\"stylesheet\" href=\"q.css\">");
-    echo("<a href=\"https://sportfieldbooking.000webhostapp.com//add.html\"><button>Return</button></a><br>");
+//closing the connection.
 mysqli_close($conn);
 
 ?>
-<br>
-     
