@@ -123,20 +123,6 @@
                     return list
                 }
 
-                function reservationNumber(){
-                    var flag = true;
-                    var i = 0;
-                    var reservationList = [];
-                    while(flag){
-                        while(reservationList[i] != null){
-                            i++;
-                        }
-                        reservationList[i]= i;
-                        flag = false;
-                    }
-                    return i+1;
-                }
-
                 // list contains the sport name, duration and the duration's price
                 const booking = [
                 { sportName: 'Padel', duration: '60 min', price: 12 },
@@ -280,7 +266,7 @@
               // if information is valid then add the reservation
               var list = confirmInfo();
               addInfo(list);
-              alert("Booking confirmed. " + "Your Booking number is: "+ reservationNumber())
+              alert("Booking confirmed. ")
 
               return false;
             }
