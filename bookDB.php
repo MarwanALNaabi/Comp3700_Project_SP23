@@ -1,11 +1,13 @@
 <?php
+// set the servaername, username, password, and database name
 $servername = "localhost";
 $username = "id20504934_webproject";
-$password = "Webproject@2023";//
+$password = "Webproject@2023";
 $dbname = "id20504934_sportfieldbooking";
 
-//check connection
+//create connection to the database
 $conn = mysqli_connect($servername, $username, $password, $dbname);
+//check connection to the database
 if(!$conn){
     die("Connection failed: " .mysqli_connect_error());
 } 
@@ -46,11 +48,12 @@ function generateRandomNumber($conn,$len=4){
         return $randomString;
     }
 }
+//call the function 
 generateRandomNumber($conn)
 
 
 ?>
-
+<!-- button to return back to the book page -->
 <link rel="stylesheet" href="b.css">        
     <br>
     <a href="https://sportfieldbooking.000webhostapp.com/book.php"><button>Return</button></a><br>
