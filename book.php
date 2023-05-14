@@ -157,19 +157,6 @@
                     return list
                 }
 
-                function reservationNumber(){
-                    var flag = true;
-                    var i = 1;
-                    var reservationList = [];
-                    while(flag){
-                        while(reservationList[i] != null){
-                            i++;
-                        }
-                        reservationList[i]= i;
-                        flag = false;
-                    }
-                    return i;
-                }
 
                 // list contains the sport name, duration and the duration's price
                 const booking = [

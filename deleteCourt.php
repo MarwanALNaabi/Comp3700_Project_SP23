@@ -3,10 +3,11 @@
 //read  the commertial number from the form, and save it in a variable.
 $courtNum = $_POST['deleteCourt'];
 //defining the name of the database , servername , username and password.
+// set the servaername, username, password, and database name
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "sportfieldbooking";
+$username = "id20504934_webproject";
+$password = "Webproject@2023";
+$dbname = "id20504934_sportfieldbooking";
 //creating  a connection to the data base.
 $conn = new mysqli($servername, $username, $password, $dbname);
 //checking if the connection exists., if not ; die.

@@ -7,7 +7,7 @@ $experience = $_POST["experience"];
 $feedback = $_POST["feedback"];
 $suggestion = $_POST["suggestion"];
 
-
+//save connection information
 $servername = "localhost";
 $username = "id20504934_webproject";
 $password = "Webproject@2023";//
@@ -25,12 +25,22 @@ $result2 = mysqli_query($conn, $sql2);
 
 
 ?>
+<!--
+    link with css tyle and create the header of a table to display the records after adding in the questionnaire form
+-->
+
 <link rel="stylesheet" href="q.css">
         <center>
         <br>
         <p>The record has been added successfully</p>
         
         <br>
+        <!--
+            
+        -->
+        <!--
+            a return button which send you back to questionnaire page
+            -->
         <a href="https://sportfieldbooking.000webhostapp.com/questionnaire.html"><button>Return</button></a><br>
         <table border="1" style="width:70%;border-collapse: collapse;">
             <tr>
@@ -43,6 +53,7 @@ $result2 = mysqli_query($conn, $sql2);
             <th>Suggestion</th>
             </tr>
             <?php
+            // getting the server information
             $servername = "localhost";
             $username = "id20504934_webproject";
             $password = "Webproject@2023";//
@@ -51,9 +62,12 @@ $result2 = mysqli_query($conn, $sql2);
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
                 }
+            //select all data from QuestionnaireDB table database
             $sql="SELECT * FROM QuestionnaireDB";
             $result = mysqli_query($conn, $sql);
             
+
+            //printing all the records as a table.
             if($result)
             {
             while ($record=mysqli_fetch_assoc($result)){
@@ -64,8 +78,6 @@ $result2 = mysqli_query($conn, $sql2);
                 echo("<td>".$experience=$record['experience']);
                 echo("<td>".$feedback=$record['feedback']);
                 echo("<td>".$suggestion=$record['suggestions']);
-                
-
             }
             }
             

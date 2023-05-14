@@ -18,6 +18,7 @@
             <th>facilities</th>
             </tr>
             <?php
+            // database information
             $servername = "localhost";
             $username = "id20504934_webproject";
             $password = "Webproject@2023";//
@@ -31,11 +32,11 @@
             $sql="SELECT * FROM courts";
 
             $result = mysqli_query($conn, $sql);
-
+            // if there is a record of the courts, print them all
             if($result)
                         {
                         while ($record=mysqli_fetch_assoc($result)){
-                            
+                            // printing the records
                             echo("<tr><td>".$name=$record['name']);
                             echo("<td>".$typeOfField=$record['typeOfField']);
                             echo("<td>".$number=$record['number']);
