@@ -22,7 +22,7 @@ if(mysqli_affected_rows($conn) > 0){
     print("Court with reservation number $bookNum is deleted");}
 //the reservation was not found
 else{
-    print("This commercial number does not exist !");}
+    print("This reservation number does not exist !");}
 //to return to the book page
     echo("<link rel=\"stylesheet\" href=\"q.css\">");
     echo("<a href=\"https://sportfieldbooking.000webhostapp.com//book.php\"><button>Return</button></a><br>");

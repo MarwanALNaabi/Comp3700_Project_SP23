@@ -2,21 +2,16 @@
     <head>
     </head>
 <body>
-
+<link rel="stylesheet" href="q.css"><br>
 <?php
-//creating a unction that get the information as an array , connection and table name , then write the information in the database.
-function addCourt($info,$connection , $tableName){
-    $sql ="insert into $tableName(commercialnumber ,name, typeOfField, number , email, sportType , province , state , openningTime , closingTime , facilities)"."values('{$info['commercialnumber']}','{$info['name']}','{$info['typeOfField']}','{$info['number']}','{$info['email']}','{$info['sportType']}','{$info['province']}','{$info['state']}','{$info['openningTime']}','{$info['closingTime']}','{$info['facilities']}')";
-    $result = mysqli_query($connection, $sql);
-    print("Your court {$info['name']} has been successfuly added to the website .");
 
-}
 //defining the name of the database , servername , username and password.
 // set the servaername, username, password, and database name
 $servername = "localhost";
 $username = "id20504934_webproject";
 $password = "Webproject@2023";
 $dbname = "id20504934_sportfieldbooking";
+
 //creating  a connection to the data base.
 $conn = new mysqli($servername, $username, $password, $dbname);
 //checking if the connection exists., if not ; die.
@@ -37,8 +32,8 @@ if(mysqli_num_rows($result) > 0){
 
 else{
 //creating a variable for each given information in the (add.html). 
-$name = $_POST['name'];
 
+$name = $_POST['name'];
 $type = "";
 if (isset($_POST['type1']) && isset($_POST['type2'])) {
     $type = "In-Door and Out-Door";
@@ -94,14 +89,17 @@ if ($facilities == null) {
     $facilities = "No facilities";
 }
 
-//Creating a array to save the information in it .
-$info = array("commercialnumber"=>"$commercialNo" , "name"=>"$name" , "typeOfField"=>"$type" , "number"=>"$contactNo","email"=>"$email" , "sportType"=>"$sportType" , "province"=>"$Province","state"=>"$state","openningTime"=>"$openningTime" , "closingTime"=>"$closingTime" , "facilities"=>"$facilities");
 
-//calling the function that adds the information in the data base.
-addCourt($info,$conn,$tname);
+$sql2 ="insert into courts(commercialnumber ,name, typeOfField, number , email, sportType , province , state , openningTime , closingTime , facilities)"."values('$commercialNo','$name','$type','$contactNo','$email','$sportType','$Province','$state','$openningTime','$closingTime','$facilities')";
+$result2 = mysqli_query($conn, $sql2);
+print("<center><p style=\"color:white; font-size:25px\">Your court $name has been successfully added to the website.</p></center>");
 }
+
+
 //closing the connection.
 mysqli_close($conn);
 ?>
+<a href="https://sportfieldbooking.000webhostapp.com/add.html"><button>Return</button></a><br>
+
 </body>
 </html>
