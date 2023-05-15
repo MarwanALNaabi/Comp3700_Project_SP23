@@ -19,15 +19,14 @@ $result = mysqli_query($conn,$sql);
 
 // the reservation exists 
 if(mysqli_affected_rows($conn) > 0){
-    print("Court with reservation number $bookNum is deleted");}
+    print("<center><p style=\"color:white; font-size:25px\">reservation with reservation number $bookNum is deleted</p></center>");}
 //the reservation was not found
 else{
-    print("This reservation number does not exist !");}
+    print("<center><p style=\"color:white; font-size:25px\">This reservation number does not exist !</p></center>");}
 //to return to the book page
     echo("<link rel=\"stylesheet\" href=\"q.css\">");
-    echo("<a href=\"https://sportfieldbooking.000webhostapp.com//book.php\"><button>Return</button></a><br>");
+    echo("<center><a href=\"https://sportfieldbooking.000webhostapp.com//book.php\"><button>Return</button></a></center><br>");
 //close connection
 mysqli_close($conn);
 
 ?>
-

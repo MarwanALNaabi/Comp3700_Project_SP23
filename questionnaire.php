@@ -1,4 +1,5 @@
 <?php
+//Set the values from questionnaire page into variables
 $name = $_POST["name"];
 $email = $_POST["email"];
 $rate = $_POST["rate"];
@@ -19,8 +20,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 }
+// add the questionnaire to the database
 $sql2="insert into `QuestionnaireDB`(name, email, rating, mostLiked, experience, feedback, suggestions)"."values('$name','$email','$rate','$mostLiked','$experience','$feedback','$suggestion')";
-
 $result2 = mysqli_query($conn, $sql2);
 
 
@@ -36,7 +37,7 @@ $result2 = mysqli_query($conn, $sql2);
         
         <br>
         <!--
-            
+
         -->
         <!--
             a return button which send you back to questionnaire page
@@ -59,6 +60,7 @@ $result2 = mysqli_query($conn, $sql2);
             $password = "Webproject@2023";//
             $dbname = "id20504934_sportfieldbooking";
             $conn = new mysqli($servername, $username, $password, $dbname);
+            // die if the connection failed
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
                 }

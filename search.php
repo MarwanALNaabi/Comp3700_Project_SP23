@@ -32,7 +32,7 @@
             form that contains a text input for searching purpose with a button
         -->
         <form action="https://sportfieldbooking.000webhostapp.com/search.php" method="post" id="book-form" name="book-form">
-            <input type="text" name="search" id="search" placeholder="Search for a reservation using the given ID" required>
+            <input type="text" name="search" id="search" placeholder="Search for a reservation using the phone number " required>
             <button name="submit">Search</button>
             <?php
             // the information of database server
