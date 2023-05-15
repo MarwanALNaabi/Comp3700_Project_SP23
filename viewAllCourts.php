@@ -90,6 +90,7 @@
                     }
 
             }
+            function display($result){
             //get the number of rows
             $rowCount = mysqli_num_rows($result);
             if ($rowCount <= 0){
@@ -122,6 +123,9 @@
 
                 }
             }
+            }
+            display($result);
+            
             
             
            
