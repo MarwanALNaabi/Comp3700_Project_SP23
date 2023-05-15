@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 14, 2023 at 07:30 PM
+-- Generation Time: May 15, 2023 at 08:58 AM
 -- Server version: 10.5.16-MariaDB
 -- PHP Version: 7.3.32
 
@@ -113,6 +113,7 @@ INSERT INTO `QuestionnaireDB` (`name`, `email`, `rating`, `mostLiked`, `experien
 ('Khalid', 'Khalid11@gmail.com', 'Excellent', 'Fun Page', 'Creative', 'A creative and helpful website', 'Add more clubs\r\n'),
 ('marwan', 'Marwan.yn71@gmail.com', 'Very Good', 'Home Page', 'aase2', 'adfa af ', 'af asdf '),
 ('Mohamed', 'Mohamed@gmail.com', 'Very Good', 'Home Page', 'Wonderful', 'Nice website', 'No suggestions '),
+('Noah', 'noah@gmail.com', 'Excellent', 'Home Page', 'fabulous', 'good job', 'great work'),
 ('ns padel', 'nspadel@gmail.com', 'Excellent', 'Home Page', 'Wow', 'Wonderful website', 'great job'),
 ('Marwan Yousuf', 's137663@student.squ.edu.om', 'Excellent', 'Book Page', 'Wow', 'Your website is amaizing!', 'No suggestion to be add'),
 ('Yaqoob', 's138590@student.squ.edu.om', 'Excellent', 'Book Page', 'Helpful', 'Helpful website ', 'Improve the website ');
