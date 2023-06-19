@@ -8,9 +8,9 @@
 //defining the name of the database , servername , username and password.
 // set the servaername, username, password, and database name
 $servername = "localhost";
-$username = "id20504934_webproject";
-$password = "Webproject@2023";
-$dbname = "id20504934_sportfieldbooking";
+$username = "";
+$password = "";
+$dbname = "";
 
 //creating  a connection to the data base.
 $conn = new mysqli($servername, $username, $password, $dbname);
