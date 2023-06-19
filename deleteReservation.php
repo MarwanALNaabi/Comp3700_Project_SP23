@@ -3,9 +3,9 @@
 $bookNum = $_POST['deleteReservation'];
 
 $servername = "localhost";
-$username = "id20504934_webproject";
-$password = "Webproject@2023";//
-$dbname = "id20504934_sportfieldbooking";
+$username = "";
+$password = "";
+$dbname = "";
 //create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
