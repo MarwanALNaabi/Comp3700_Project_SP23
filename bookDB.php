@@ -1,9 +1,9 @@
 <?php
 // set the servaername, username, password, and database name
 $servername = "localhost";
-$username = "id20504934_webproject";
-$password = "Webproject@2023";
-$dbname = "id20504934_sportfieldbooking";
+$username = "";
+$password = "";
+$dbname = "";
 
 //create connection to the database
 $conn = mysqli_connect($servername, $username, $password, $dbname);
