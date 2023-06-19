@@ -10,9 +10,9 @@ $suggestion = $_POST["suggestion"];
 
 //save connection information
 $servername = "localhost";
-$username = "id20504934_webproject";
-$password = "Webproject@2023";//
-$dbname = "id20504934_sportfieldbooking";
+$username = "";
+$password = "";
+$dbname = "";
 //Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -55,10 +55,10 @@ $result2 = mysqli_query($conn, $sql2);
             </tr>
             <?php
             // getting the server information
-            $servername = "localhost";
-            $username = "id20504934_webproject";
-            $password = "Webproject@2023";//
-            $dbname = "id20504934_sportfieldbooking";
+           $servername = "localhost";
+            $username = "";
+            $password = "";
+            $dbname = "";
             $conn = new mysqli($servername, $username, $password, $dbname);
             // die if the connection failed
             if ($conn->connect_error) {
